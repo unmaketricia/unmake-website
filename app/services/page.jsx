@@ -117,8 +117,9 @@ export default function Services() {
             <p className="eyebrow">The offer</p>
             <h2>Not ready to build the whole system?</h2>
             <p>
-              Here&apos;s what I can do for you — start with one piece, or stack
-              a few.
+              Here&apos;s what I can do for you —
+              <br />
+              start with one piece, or stack a few.
             </p>
           </div>
           <div className="grid three">
