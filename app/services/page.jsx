@@ -115,7 +115,11 @@ export default function Services() {
         <Reveal className="wrap">
           <div className="section-head">
             <p className="eyebrow">The offer</p>
-            <h2>What I can build for you.</h2>
+            <h2>Not ready to build the whole system?</h2>
+            <p>
+              Here&apos;s what I can do for you — start with one piece, or stack
+              a few.
+            </p>
           </div>
           <div className="grid three">
             {services.map(([num, title, body, price]) => (
