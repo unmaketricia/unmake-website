@@ -34,11 +34,11 @@ export default function Contact() {
               <p>
                 <a
                   className="textlink"
-                  href="https://wa.me/639615006897"
+                  href="https://wa.me/639605283683"
                   target="_blank"
                   rel="noopener"
                 >
-                  +63 961 500 6897
+                  +63 960 528 3683
                 </a>
               </p>
               <h3>Instagram</h3>
