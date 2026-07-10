@@ -59,22 +59,26 @@ export default function Contact() {
               </p>
             </div>
 
-            <form
-              action="https://formsubmit.co/socials.tricia@gmail.com"
-              method="POST"
-            >
+            <form action="https://api.web3forms.com/submit" method="POST">
               <input
                 type="hidden"
-                name="_subject"
+                name="access_key"
+                value="e15b964e-cd6a-4d35-b42d-9a3fcd68758f"
+              />
+              <input
+                type="hidden"
+                name="subject"
                 value="New quote request from un-make.com"
               />
-              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="from_name" value="UNMAKE website" />
+              {/* honeypot: bots tick this hidden box, real people can't see it */}
               <input
-                type="hidden"
-                name="_next"
-                value="https://un-make.com/contact"
+                type="checkbox"
+                name="botcheck"
+                style={{ display: "none" }}
+                tabIndex={-1}
+                autoComplete="off"
               />
-              <input type="text" name="_honey" style={{ display: "none" }} />
               <div className="field-row">
                 <div>
                   <label htmlFor="name">Your name</label>
