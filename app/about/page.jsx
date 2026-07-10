@@ -10,8 +10,8 @@ export const metadata = {
 const facts = [
   ["Now", "Based in Calamba City, Laguna, Philippines. Working with brands worldwide."],
   ["2011", "BS in Entrepreneurship, Southville International School and Colleges."],
-  ["2011–18", "Seven years in banking and finance across four global institutions."],
-  ["2018–now", "Started as a content writer, fell for building social systems, never looked back."],
+  ["2011–18", "Seven years in banking and finance."],
+  ["2018–now", "Started as a content writer, fell for digital marketing, never looked back."],
   ["Always", "I organize for fun. My friends call it a flaw. My clients call it a superpower."],
 ];
 
@@ -39,7 +39,10 @@ export default function About() {
         <Reveal className="wrap">
           <div className="section-head">
             <p className="eyebrow">The story</p>
-            <h2>From trading floors to systems that breathe.</h2>
+            <h2>
+              From finance and compliance to systems that breathe and content
+              that connects.
+            </h2>
           </div>
           <div className="story">
             <p className="first">
@@ -71,7 +74,9 @@ export default function About() {
                 marginTop: "var(--s4)",
               }}
             >
-              Keep what matters. Unmake the rest.
+              Keep what matters.
+              <br />
+              Unmake the rest.
             </p>
           </div>
         </Reveal>

@@ -62,8 +62,8 @@ export default function ThankYou() {
           <p style={{ marginTop: "var(--s5)", color: "var(--muted)" }}>
             Didn&apos;t mean to land here, or need to add something? Email me
             directly at{" "}
-            <a className="textlink" href="mailto:hello@un-make.com">
-              hello@un-make.com
+            <a className="textlink" href="mailto:tricia@un-make.com">
+              tricia@un-make.com
             </a>{" "}
             or message{" "}
             <a

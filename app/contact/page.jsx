@@ -26,8 +26,8 @@ export default function Contact() {
             <div className="contact-info">
               <h3>Email</h3>
               <p>
-                <a className="textlink" href="mailto:hello@un-make.com">
-                  hello@un-make.com
+                <a className="textlink" href="mailto:tricia@un-make.com">
+                  tricia@un-make.com
                 </a>
               </p>
               <h3>WhatsApp</h3>
@@ -63,7 +63,7 @@ export default function Contact() {
               <input
                 type="hidden"
                 name="access_key"
-                value="e15b964e-cd6a-4d35-b42d-9a3fcd68758f"
+                value="2d389fe0-93a5-4cdf-97f9-672c0e593ef5"
               />
               <input
                 type="hidden"

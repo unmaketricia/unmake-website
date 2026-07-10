@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           <div>
             <h4>Connect</h4>
-            <a href="mailto:hello@un-make.com">hello@un-make.com</a>
+            <a href="mailto:tricia@un-make.com">tricia@un-make.com</a>
             <a
               href="https://www.instagram.com/unmakeit"
               target="_blank"
