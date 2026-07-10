@@ -71,6 +71,11 @@ export default function Contact() {
                 value="New quote request from un-make.com"
               />
               <input type="hidden" name="from_name" value="UNMAKE website" />
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://un-make.com/thank-you"
+              />
               {/* honeypot: bots tick this hidden box, real people can't see it */}
               <input
                 type="checkbox"
