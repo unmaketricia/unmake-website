@@ -189,6 +189,10 @@
   .callout .big { font-family: var(--font-lora), serif; font-style: italic; font-size: clamp(2rem,5vw,3rem); color: var(--gold); line-height: 1; white-space: nowrap; }
   .callout h3 { color: var(--cream); margin-bottom: var(--s1); }
   .callout p { color: #C7C6BC; margin: 0; }
+  .callout.compact { padding: var(--s4); gap: var(--s3); margin-top: var(--s4); }
+  .callout.compact .big { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+  .callout.compact h3 { font-size: 1.05rem; }
+  .callout.compact p { font-size: 0.92rem; }
 
   /* ---------- AI split ---------- */
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); margin-top: var(--s4); }

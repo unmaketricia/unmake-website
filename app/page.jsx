@@ -104,13 +104,9 @@ export default function Home() {
               <img src="/images/tricia.jpg" alt="Tricia Hilario" />
             </div>
           </div>
-        </Reveal>
-      </section>
 
-      {/* 3. Not an agency */}
-      <section>
-        <Reveal className="wrap">
-          <div className="callout">
+          {/* Not an agency — sits under Meet Tricia, same background */}
+          <div className="callout compact">
             <span className="big">not an agency.</span>
             <div>
               <h3>You work with me. On purpose.</h3>
