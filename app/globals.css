@@ -154,12 +154,12 @@
   .hero-meta b { color: var(--ink); font-weight: 500; }
 
   /* Signature strike */
-  .strike-block { font-size: clamp(1.6rem, 4.5vw, 3rem); font-weight: 500; line-height: 1.5; letter-spacing: -0.02em; max-width: 18ch; }
-  .strike { position: relative; display: inline-block; color: var(--muted); transition: color 0.4s ease; }
-  .strike::after { content: ""; position: absolute; left: -3%; top: 55%; width: 106%; height: 3px; background: var(--fig); border-radius: 2px; transform: scaleX(0); transform-origin: left center; transition: transform 0.55s cubic-bezier(0.65,0,0.35,1); }
+  .strike-block { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; }
+  .strike { position: relative; display: block; width: fit-content; color: var(--muted); transition: color 0.4s ease; }
+  .strike::after { content: ""; position: absolute; left: -3%; top: 52%; width: 106%; height: 3px; background: var(--fig); border-radius: 2px; transform: scaleX(0); transform-origin: left center; transition: transform 0.55s cubic-bezier(0.65,0,0.35,1); }
   .strike.struck::after { transform: scaleX(1); }
   .strike.struck { color: #A6A59B; }
-  .keep { color: var(--teal); }
+  .keep { display: block; color: var(--teal); margin-top: var(--s3); }
 
   /* ---------- Cards ---------- */
   .grid { display: grid; gap: var(--s3); }

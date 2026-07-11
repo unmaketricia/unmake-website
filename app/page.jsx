@@ -22,49 +22,26 @@ const services = [
 export default function Home() {
   return (
     <>
-      {/* 1. Hero + philosophy */}
+      {/* 1. Hero — the philosophy */}
       <header className="hero">
         <div className="wrap">
-          <p className="eyebrow">Work with me</p>
-          <h1>Marketing that works smarter, not harder.</h1>
-          <p className="lede">
-            Organic growth systems for brands that want to grow without the
-            grind.
+          <p className="eyebrow">Marketing, the UNMAKE way</p>
+          <StrikeBlock />
+          <p
+            className="lede"
+            style={{ marginTop: "var(--s4)", maxWidth: "48ch" }}
+          >
+            AI clears the repetitive work. I protect the parts your audience can
+            actually feel. Efficient where it should be, human where it has to
+            be.
           </p>
-          <div className="hero-actions">
+          <div className="hero-actions" style={{ marginTop: "var(--s5)" }}>
             <a className="btn" href="#offer">
               See services
             </a>
             <Link className="btn ghost" href="/shop">
               Shop products
             </Link>
-          </div>
-          <div className="hero-meta">
-            <span>
-              <b>7+ years</b> in digital marketing
-            </span>
-            <span>
-              <b>Brands</b> in the US, UK, AU &amp; Asia
-            </span>
-            <span>
-              <b>One strategist</b>, no agency layers
-            </span>
-          </div>
-
-          <div style={{ marginTop: "var(--s6)" }}>
-            <p className="eyebrow">The philosophy</p>
-            <StrikeBlock />
-            <p
-              style={{
-                marginTop: "var(--s4)",
-                color: "var(--muted)",
-                maxWidth: "46ch",
-              }}
-            >
-              AI clears the repetitive work. I protect the parts your audience
-              can actually feel. Efficient where it should be, human where it
-              has to be.
-            </p>
           </div>
         </div>
       </header>

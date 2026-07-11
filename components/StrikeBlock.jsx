@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from "react";
 const words = ["busywork.", "guesswork.", "panic-posting."];
 
 // The signature move: cross out "busywork / guesswork / panic-posting"
-// one word at a time when the block scrolls into view.
+// one word at a time when the block scrolls into view. Acts as the hero
+// headline, so it renders as an <h1>.
 export default function StrikeBlock() {
   const ref = useRef(null);
   const [struckCount, setStruckCount] = useState(0);
@@ -36,18 +37,21 @@ export default function StrikeBlock() {
   }, []);
 
   return (
-    <div
+    <h1
       ref={ref}
       className="strike-block"
       aria-label="Crossed out: busywork, guesswork, panic-posting. Kept: your voice, your strategy, your judgment."
     >
       {words.map((w, i) => (
         <span key={w} className={`strike${i < struckCount ? " struck" : ""}`}>
-          {w}{" "}
+          {w}
         </span>
       ))}
-      <br />
-      <span className="keep">Keep your voice. Your strategy. Your judgment.</span>
-    </div>
+      <span className="keep">
+        Keep your voice.
+        <br />
+        Your strategy. Your judgment.
+      </span>
+    </h1>
   );
 }
