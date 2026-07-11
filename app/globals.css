@@ -267,6 +267,7 @@
   .product-art { aspect-ratio: 3/4; border-radius: var(--r); background: linear-gradient(160deg, var(--teal), var(--teal-deep)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--cream); text-align: center; padding: var(--s4); box-shadow: 0 30px 60px -30px rgba(44,80,92,0.6); }
   .product-art .big { font-weight: 600; font-size: 1.7rem; letter-spacing: 0.04em; line-height: 1.25; }
   .product-art .sub { font-family: var(--font-lora), serif; font-style: italic; color: var(--gold); margin-top: var(--s2); font-size: 0.95rem; }
+  .product-cover { width: 100%; height: auto; display: block; border-radius: var(--r); box-shadow: 0 30px 60px -30px rgba(44,80,92,0.6); }
   .product .price-tag { font-size: 1.4rem; font-weight: 500; color: var(--fig); margin: var(--s3) 0; }
   .cats { display: flex; flex-wrap: wrap; gap: 10px; }
   .cats span { border-radius: 999px; padding: 9px 20px; font-size: 0.88rem; font-weight: 400; }

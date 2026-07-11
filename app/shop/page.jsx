@@ -30,14 +30,12 @@ export default function Shop() {
             <h2>No Toy Needed, Vol. 1</h2>
           </div>
           <div className="product">
-            <div className="product-art">
-              <span className="big">
-                NO TOY
-                <br />
-                NEEDED
-              </span>
-              <span className="sub">What can your newborn do today?</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="product-cover"
+              src="/images/no-toy-needed-cover.jpg"
+              alt="No Toy Needed, Vol. 1 — 30 printable baby activities"
+            />
             <div>
               <span className="pill-badge">Family · Babies 0–6 months</span>
               <p style={{ color: "var(--muted)", marginBottom: "var(--s2)" }}>
