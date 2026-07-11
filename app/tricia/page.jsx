@@ -31,6 +31,14 @@ export default function About() {
               <Link className="btn" href="/services">
                 See services
               </Link>
+              <a
+                className="btn ghost"
+                href="https://calendly.com/tricia-un-make/30min"
+                target="_blank"
+                rel="noopener"
+              >
+                Book a call
+              </a>
             </div>
           </div>
           <div className="portrait">

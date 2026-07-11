@@ -17,6 +17,16 @@ export default function Contact() {
             A few details and I&apos;ll reply with a plan, clear pricing, and an
             honest read on fit.
           </p>
+          <div className="hero-actions">
+            <a
+              className="btn"
+              href="https://calendly.com/tricia-un-make/30min"
+              target="_blank"
+              rel="noopener"
+            >
+              Book a call
+            </a>
+          </div>
         </div>
       </header>
 
