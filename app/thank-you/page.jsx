@@ -14,10 +14,11 @@ export default function ThankYou() {
       <header className="hero">
         <div className="wrap">
           <p className="eyebrow">Message received</p>
-          <h1>Thanks — your message is in.</h1>
+          <h1>Thanks, your message is in.</h1>
           <p className="lede">
-            I read every message myself. Expect a reply within 24 hours with a
-            plan, clear pricing, and an honest read on whether we&apos;re a fit.
+            I read every message myself.
+            <br />
+            Please expect a reply within 24 hours.
           </p>
           <div className="hero-actions">
             <Link className="btn" href="/services">
