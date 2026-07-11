@@ -154,7 +154,7 @@
   .hero-meta b { color: var(--ink); font-weight: 500; }
 
   /* Signature strike */
-  .strike-block { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 600; line-height: 1.18; letter-spacing: -0.02em; }
+  .strike-block { font-size: clamp(1.9rem, 5vw, 3.2rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
   .strike { position: relative; display: block; width: fit-content; color: var(--muted); transition: color 0.4s ease; }
   .strike::after { content: ""; position: absolute; left: -3%; top: 52%; width: 106%; height: 3px; background: var(--fig); border-radius: 2px; transform: scaleX(0); transform-origin: left center; transition: transform 0.55s cubic-bezier(0.65,0,0.35,1); }
   .strike.struck::after { transform: scaleX(1); }
