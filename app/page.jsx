@@ -40,9 +40,14 @@ export default function Home() {
                 <a className="btn" href="#offer">
                   See services
                 </a>
-                <Link className="btn ghost" href="/shop">
-                  Shop products
-                </Link>
+                <a
+                  className="btn ghost"
+                  href="https://calendly.com/tricia-un-make/30min"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Book a call
+                </a>
               </div>
             </div>
           </div>
