@@ -3,14 +3,6 @@ import Reveal from "@/components/Reveal";
 import StrikeBlock from "@/components/StrikeBlock";
 import CtaBand from "@/components/CtaBand";
 
-const facts = [
-  ["Now", "Based in Calamba City, Laguna, Philippines. Working with brands worldwide."],
-  ["2011", "BS in Entrepreneurship, Southville International School and Colleges."],
-  ["2011–18", "Seven years in banking and finance."],
-  ["2018–now", "Started as a content writer, fell for digital marketing, never looked back."],
-  ["Always", "I organize for fun. My friends call it a flaw. My clients call it a superpower."],
-];
-
 export default function Home() {
   return (
     <>
@@ -64,42 +56,8 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* 3. The offer */}
-      <section>
-        <Reveal className="wrap">
-          <div className="section-head">
-            <p className="eyebrow">Two ways in</p>
-            <h2>Pick your path.</h2>
-          </div>
-          <div className="grid two">
-            <div className="card feature">
-              <span className="pill-badge">For brands</span>
-              <h3>Done-for-you marketing</h3>
-              <p>
-                Social, email, influencer, Amazon, websites, and SEO. Built as
-                systems, run with judgment.
-              </p>
-              <Link className="btn on-dark" href="/services">
-                Explore services
-              </Link>
-            </div>
-            <div className="card">
-              <span className="pill-badge">For everyone</span>
-              <h3>Digital products</h3>
-              <p>
-                Ready-to-use guides and templates that clear mental clutter from
-                family, money, and work.
-              </p>
-              <Link className="btn ghost" href="/shop">
-                Browse the shop
-              </Link>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* 4. Meet Tricia — trust */}
-      <section className="cream" id="meet-tricia">
+      {/* 3. Meet Tricia — trust */}
+      <section id="meet-tricia">
         <Reveal className="wrap">
           <div className="about-hero">
             <div>
@@ -172,25 +130,41 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* 5. Quick facts — credibility */}
-      <section>
+      {/* 4. The offer */}
+      <section className="cream">
         <Reveal className="wrap">
           <div className="section-head">
-            <p className="eyebrow">The short version</p>
-            <h2>Quick facts.</h2>
+            <p className="eyebrow">Two ways in</p>
+            <h2>Pick your path.</h2>
           </div>
-          <ul className="facts">
-            {facts.map(([yr, text]) => (
-              <li key={yr}>
-                <span className="yr">{yr}</span>
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="grid two">
+            <div className="card feature">
+              <span className="pill-badge">For brands</span>
+              <h3>Done-for-you marketing</h3>
+              <p>
+                Social, email, influencer, Amazon, websites, and SEO. Built as
+                systems, run with judgment.
+              </p>
+              <Link className="btn on-dark" href="/services">
+                Explore services
+              </Link>
+            </div>
+            <div className="card">
+              <span className="pill-badge">For everyone</span>
+              <h3>Digital products</h3>
+              <p>
+                Ready-to-use guides and templates that clear mental clutter from
+                family, money, and work.
+              </p>
+              <Link className="btn ghost" href="/shop">
+                Browse the shop
+              </Link>
+            </div>
+          </div>
         </Reveal>
       </section>
 
-      {/* 6. Toolbox — credibility */}
+      {/* 5. Toolbox — credibility */}
       <section className="teal tight">
         <Reveal className="wrap">
           <p className="eyebrow">Toolbox</p>
@@ -206,7 +180,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* 7. Social proof */}
+      {/* 6. Social proof */}
       <section className="cream">
         <Reveal className="wrap">
           <p className="eyebrow">Trusted by</p>
@@ -230,7 +204,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* 8. Convert */}
+      {/* 7. Convert */}
       <CtaBand
         title="Tell me where you're stuck."
         text="One message. I'll reply with a plan, clear pricing, and an honest read on fit."
