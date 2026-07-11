@@ -40,8 +40,11 @@ export default function About() {
           <div className="section-head">
             <p className="eyebrow">The story</p>
             <h2>
-              From finance and compliance to systems that breathe and content
-              that connects.
+              From finance &amp; compliance
+              <br />
+              to systems that breathe
+              <br />
+              and content that connect.
             </h2>
           </div>
           <div className="story">
