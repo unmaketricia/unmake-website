@@ -221,7 +221,7 @@ export default function Services() {
               <div className="metrics">
                 <div className="metric">
                   <div className="n">9,700+</div>
-                  <div className="l">followers, up from 8,000 in a year</div>
+                  <div className="l">followers, grown from zero in a year</div>
                 </div>
                 <div className="metric">
                   <div className="n">Trust-first</div>
