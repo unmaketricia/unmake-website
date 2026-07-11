@@ -70,42 +70,29 @@ export default function Home() {
                 and content that connect.
               </h2>
               <p className="lede" style={{ marginTop: "var(--s3)" }}>
-                Founder and the face of UNMAKE. Marketer, working parent,
-                recovering over-complicator.
+                Founder and face of UNMAKE. Marketer, working parent, recovering
+                over-complicator.
               </p>
               <div className="story" style={{ marginTop: "var(--s4)" }}>
                 <p className="first">
-                  I spent seven years in global banking: HSBC, Deutsche Bank,
-                  ANZ, ING. I learned how demanding institutions build systems,
-                  and what it costs to live inside ones that always ask for
-                  more.
+                  I hold a BS in Entrepreneurship, so I don&apos;t just market
+                  for businesses, I understand what it takes to run one: the
+                  late nights, the tight budgets, the pressure to always do more
+                  with less.
                 </p>
                 <p>
-                  In 2018 I left and became a social media strategist. Seven
-                  years on, I&apos;ve helped brands from skincare to publishing
-                  to home design, across the US, UK, Australia, and Asia, grow
-                  without burning out the people behind them.
+                  Before UNMAKE, I spent seven years in global banking (HSBC,
+                  Deutsche Bank, ANZ, ING), then became a social media strategist
+                  in 2018. Since then, I&apos;ve helped brands across a range of
+                  industries in the US, UK, Australia, and Asia grow without
+                  losing themselves in the process.
                 </p>
                 <p>
-                  Then AI arrived, and suddenly everyone could produce more
-                  content, faster. Most of it sounds exactly the same.
-                  That&apos;s where I planted my flag: use AI to clear the
-                  busywork so the human work gets more attention, not less. The
-                  parts that build real trust stay handmade.
-                </p>
-                <p
-                  className="serif"
-                  style={{
-                    fontStyle: "italic",
-                    fontSize: "1.3rem",
-                    color: "var(--fig)",
-                    maxWidth: "24ch",
-                    marginTop: "var(--s4)",
-                  }}
-                >
-                  Keep what matters.
-                  <br />
-                  Unmake the rest.
+                  Now, in a world where AI can churn out content in seconds, I
+                  still believe the best marketing comes from sincere, well
+                  thought out solutions, not shortcuts. AI helps me work faster.
+                  It doesn&apos;t replace the human touch that makes people trust
+                  a brand.
                 </p>
               </div>
               <div className="hero-actions">
