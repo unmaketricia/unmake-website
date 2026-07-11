@@ -3,9 +3,18 @@ import Reveal from "@/components/Reveal";
 import StrikeBlock from "@/components/StrikeBlock";
 import CtaBand from "@/components/CtaBand";
 
+const facts = [
+  ["Now", "Based in Calamba City, Laguna, Philippines. Working with brands worldwide."],
+  ["2011", "BS in Entrepreneurship, Southville International School and Colleges."],
+  ["2011–18", "Seven years in banking and finance."],
+  ["2018–now", "Started as a content writer, fell for digital marketing, never looked back."],
+  ["Always", "I organize for fun. My friends call it a flaw. My clients call it a superpower."],
+];
+
 export default function Home() {
   return (
     <>
+      {/* 1. Hook */}
       <header className="hero">
         <div className="wrap">
           <p className="eyebrow">Digital marketing, the UNMAKE way</p>
@@ -36,6 +45,7 @@ export default function Home() {
         </div>
       </header>
 
+      {/* 2. The difference */}
       <section className="cream">
         <Reveal className="wrap">
           <p className="eyebrow">The philosophy</p>
@@ -54,6 +64,7 @@ export default function Home() {
         </Reveal>
       </section>
 
+      {/* 3. The offer */}
       <section>
         <Reveal className="wrap">
           <div className="section-head">
@@ -87,7 +98,116 @@ export default function Home() {
         </Reveal>
       </section>
 
+      {/* 4. Meet Tricia — trust */}
+      <section className="cream" id="meet-tricia">
+        <Reveal className="wrap">
+          <div className="about-hero">
+            <div>
+              <p className="eyebrow">Meet Tricia</p>
+              <h2>
+                From finance &amp; compliance
+                <br />
+                to systems that breathe
+                <br />
+                and content that connect.
+              </h2>
+              <p className="lede" style={{ marginTop: "var(--s3)" }}>
+                Founder and the face of UNMAKE. Marketer, working parent,
+                recovering over-complicator.
+              </p>
+              <div className="story" style={{ marginTop: "var(--s4)" }}>
+                <p className="first">
+                  I spent seven years in global banking: HSBC, Deutsche Bank,
+                  ANZ, ING. I learned how demanding institutions build systems,
+                  and what it costs to live inside ones that always ask for
+                  more.
+                </p>
+                <p>
+                  In 2018 I left and became a social media strategist. Seven
+                  years on, I&apos;ve helped brands from skincare to publishing
+                  to home design, across the US, UK, Australia, and Asia, grow
+                  without burning out the people behind them.
+                </p>
+                <p>
+                  Then AI arrived, and suddenly everyone could produce more
+                  content, faster. Most of it sounds exactly the same.
+                  That&apos;s where I planted my flag: use AI to clear the
+                  busywork so the human work gets more attention, not less. The
+                  parts that build real trust stay handmade.
+                </p>
+                <p
+                  className="serif"
+                  style={{
+                    fontStyle: "italic",
+                    fontSize: "1.3rem",
+                    color: "var(--fig)",
+                    maxWidth: "24ch",
+                    marginTop: "var(--s4)",
+                  }}
+                >
+                  Keep what matters.
+                  <br />
+                  Unmake the rest.
+                </p>
+              </div>
+              <div className="hero-actions">
+                <Link className="btn" href="/services">
+                  See services
+                </Link>
+                <a
+                  className="btn ghost"
+                  href="https://calendly.com/tricia-un-make/30min"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Book a call
+                </a>
+              </div>
+            </div>
+            <div className="portrait">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/tricia.jpg" alt="Tricia Hilario" />
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* 5. Quick facts — credibility */}
+      <section>
+        <Reveal className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">The short version</p>
+            <h2>Quick facts.</h2>
+          </div>
+          <ul className="facts">
+            {facts.map(([yr, text]) => (
+              <li key={yr}>
+                <span className="yr">{yr}</span>
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+
+      {/* 6. Toolbox — credibility */}
       <section className="teal tight">
+        <Reveal className="wrap">
+          <p className="eyebrow">Toolbox</p>
+          <h2 style={{ maxWidth: "20ch" }}>
+            If your brand runs on it, I&apos;ve built a system in it.
+          </h2>
+          <p style={{ marginTop: "var(--s3)", maxWidth: "60ch" }}>
+            Meta Business Suite, Instagram, Facebook, TikTok, Pinterest, Canva,
+            Notion, Later, Hootsuite, Buffer, CapCut, Google Analytics, Google
+            Workspace, Metricool, Sprout Social, Shopify, WooCommerce, Klaviyo,
+            and Mailchimp, plus AI tools for analysis and production.
+          </p>
+        </Reveal>
+      </section>
+
+      {/* 7. Social proof */}
+      <section className="cream">
         <Reveal className="wrap">
           <p className="eyebrow">Trusted by</p>
           <h2 style={{ maxWidth: "20ch" }}>
@@ -103,13 +223,14 @@ export default function Home() {
             <span>OutsourcingMe</span>
           </div>
           <p style={{ marginTop: "var(--s5)" }}>
-            <Link className="btn on-dark" href="/services#results">
+            <Link className="btn" href="/services#results">
               See the results
             </Link>
           </p>
         </Reveal>
       </section>
 
+      {/* 8. Convert */}
       <CtaBand
         title="Tell me where you're stuck."
         text="One message. I'll reply with a plan, clear pricing, and an honest read on fit."

@@ -8,9 +8,10 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/shop", label: "Shop" },
-  { href: "/tricia", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
+
+const CALENDLY = "https://calendly.com/tricia-un-make/30min";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -47,10 +48,26 @@ export default function Nav() {
               </Link>
             </li>
           ))}
+          {/* CTAs inside the mobile dropdown */}
+          <li className="nav-menu-cta">
+            <a className="btn ghost" href={CALENDLY} target="_blank" rel="noopener">
+              Book a call
+            </a>
+          </li>
+          <li className="nav-menu-cta">
+            <Link className="btn" href="/contact">
+              Get a quote
+            </Link>
+          </li>
         </ul>
-        <Link className="btn nav-cta-desktop" href="/contact">
-          Get a quote
-        </Link>
+        <div className="nav-ctas">
+          <a className="btn ghost" href={CALENDLY} target="_blank" rel="noopener">
+            Book a call
+          </a>
+          <Link className="btn" href="/contact">
+            Get a quote
+          </Link>
+        </div>
         <button
           className="hamburger"
           aria-label="Menu"
