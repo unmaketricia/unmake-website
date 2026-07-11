@@ -130,8 +130,10 @@ export default function Home() {
             <p className="eyebrow">A clear stance</p>
             <h2>Where AI helps. Where it doesn&apos;t.</h2>
             <p>
-              After seven years, I know which parts of marketing get better with
-              automation, and which fall apart without a human.
+              The data tells me what happened. AI helps me see it faster.{" "}
+              <span style={{ color: "var(--fig)", fontWeight: 500 }}>
+                Experience tells me what to do about it.
+              </span>
             </p>
           </div>
           <div className="split">
@@ -158,12 +160,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <p className="split-note">
-            The data tells me what happened. AI helps me see it faster.{" "}
-            <span className="accent">
-              Experience tells me what to do about it.
-            </span>
-          </p>
         </Reveal>
       </section>
 

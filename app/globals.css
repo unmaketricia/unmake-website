@@ -328,8 +328,10 @@
   .nav-links li:last-child { border-bottom: none; }
   .nav-links a { display: block; padding: 15px 0; }
   .nav-ctas { display: none; }
-  .nav-menu-cta { display: block; border-bottom: none; }
-  .nav-menu-cta .btn { display: inline-flex; margin: 12px 12px 0 0; }
+  .nav-links .nav-menu-cta { display: block; border-bottom: none; padding-top: 6px; }
+  .nav-links .nav-menu-cta .btn { display: inline-flex; padding: 13px 28px; margin: 10px 0 0; color: var(--cream); }
+  .nav-links .nav-menu-cta .btn.ghost { color: var(--teal); }
+  .nav-links .nav-menu-cta .btn::after { content: none; }
   .hero-split, .about-hero, .product, .contact-grid, .case-top, .split, .callout { grid-template-columns: 1fr; }
   .hero-split { gap: var(--s4); }
   .callout { gap: var(--s2); }
