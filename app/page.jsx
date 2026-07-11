@@ -25,23 +25,26 @@ export default function Home() {
       {/* 1. Hero — the philosophy */}
       <header className="hero">
         <div className="wrap">
-          <p className="eyebrow">Marketing, the UNMAKE way</p>
-          <StrikeBlock />
-          <p
-            className="lede"
-            style={{ marginTop: "var(--s4)", maxWidth: "48ch" }}
-          >
-            AI clears the repetitive work. I protect the parts your audience can
-            actually feel. Efficient where it should be, human where it has to
-            be.
-          </p>
-          <div className="hero-actions" style={{ marginTop: "var(--s5)" }}>
-            <a className="btn" href="#offer">
-              See services
-            </a>
-            <Link className="btn ghost" href="/shop">
-              Shop products
-            </Link>
+          <div className="hero-split">
+            <div>
+              <p className="eyebrow">Marketing, the UNMAKE way</p>
+              <StrikeBlock />
+            </div>
+            <div className="hero-aside">
+              <p className="lede">
+                AI clears the repetitive work. I protect the parts your audience
+                can actually feel. Efficient where it should be, human where it
+                has to be.
+              </p>
+              <div className="hero-actions" style={{ marginTop: "var(--s4)" }}>
+                <a className="btn" href="#offer">
+                  See services
+                </a>
+                <Link className="btn ghost" href="/shop">
+                  Shop products
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </header>

@@ -150,6 +150,8 @@
   .hero h1 { max-width: 15ch; }
   .hero .lede { margin: var(--s4) 0; }
   .hero-actions { display: flex; gap: var(--s2); flex-wrap: wrap; }
+  .hero-split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--s5); align-items: center; }
+  .hero-aside .lede { max-width: 42ch; }
   .hero-meta { margin-top: var(--s5); display: flex; gap: var(--s4); flex-wrap: wrap; font-size: 0.9rem; color: var(--muted); }
   .hero-meta b { color: var(--ink); font-weight: 500; }
 
@@ -328,7 +330,8 @@
   .nav-ctas { display: none; }
   .nav-menu-cta { display: block; border-bottom: none; }
   .nav-menu-cta .btn { display: inline-flex; margin: 12px 12px 0 0; }
-  .about-hero, .product, .contact-grid, .case-top, .split, .callout { grid-template-columns: 1fr; }
+  .hero-split, .about-hero, .product, .contact-grid, .case-top, .split, .callout { grid-template-columns: 1fr; }
+  .hero-split { gap: var(--s4); }
   .callout { gap: var(--s2); }
   .samples { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; }
