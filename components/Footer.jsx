@@ -15,9 +15,9 @@ export default function Footer() {
           </div>
           <div>
             <h4>Explore</h4>
-            <Link href="/services">Services</Link>
+            <Link href="/">Work with me</Link>
+            <Link href="/#offer">Services</Link>
             <Link href="/shop">Shop</Link>
-            <Link href="/#meet-tricia">About</Link>
             <Link href="/contact">Contact</Link>
           </div>
           <div>

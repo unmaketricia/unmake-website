@@ -21,7 +21,7 @@ export default function ThankYou() {
             Please expect a reply within 24 hours.
           </p>
           <div className="hero-actions">
-            <Link className="btn" href="/services">
+            <Link className="btn" href="/#offer">
               Explore services
             </Link>
             <Link className="btn ghost" href="/shop">

@@ -104,7 +104,7 @@ export default function Shop() {
       <CtaBand
         title="Here for your brand instead?"
         text="The same systems thinking powers done-for-you marketing for growing brands."
-        href="/services"
+        href="/#offer"
         cta="Explore services"
       />
     </>
