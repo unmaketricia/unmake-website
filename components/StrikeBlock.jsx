@@ -50,7 +50,9 @@ export default function StrikeBlock() {
       <span className="keep">
         Keep your voice.
         <br />
-        Your strategy. Your judgment.
+        Your strategy.
+        <br />
+        Your judgment.
       </span>
     </h1>
   );
