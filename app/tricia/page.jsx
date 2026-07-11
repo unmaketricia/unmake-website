@@ -27,6 +27,11 @@ export default function About() {
               Founder and the face of UNMAKE. Marketer, working parent,
               recovering over-complicator.
             </p>
+            <div className="hero-actions">
+              <Link className="btn" href="/services">
+                See services
+              </Link>
+            </div>
           </div>
           <div className="portrait">
             {/* eslint-disable-next-line @next/next/no-img-element */}
