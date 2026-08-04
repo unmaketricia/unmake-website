@@ -5,7 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Work with me" },
+  { href: "/#about", label: "About" },
+  { href: "/#work", label: "Work" },
   { href: "/shop", label: "Shop" },
   { href: "/contact", label: "Contact" },
 ];
@@ -33,8 +34,8 @@ export default function Nav() {
     <nav className={navClass}>
       <div className="nav-inner">
         <Link href="/" className="lockup">
-          <span className="mark">UNMAKE</span>
-          <span className="byline serif">by Tricia</span>
+          <span className="mark">Tricia Hilario</span>
+          <span className="byline serif">Digital marketer</span>
         </Link>
         <ul className="nav-links">
           {links.map((l) => (

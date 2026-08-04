@@ -2,7 +2,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "Thank you | UNMAKE by Tricia",
+  title: "Thank you | Tricia Hilario",
   description:
     "Your message is in. I'll reply within 24 hours with a plan, clear pricing, and an honest read on fit.",
   robots: { index: false, follow: false },
@@ -21,7 +21,7 @@ export default function ThankYou() {
             Please expect a reply within 24 hours.
           </p>
           <div className="hero-actions">
-            <Link className="btn" href="/#offer">
+            <Link className="btn" href="/#services">
               Explore services
             </Link>
             <Link className="btn ghost" href="/shop">

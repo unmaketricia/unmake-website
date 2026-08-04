@@ -20,9 +20,9 @@ const lora = Lora({
 
 export const metadata = {
   metadataBase: new URL("https://un-make.com"),
-  title: "UNMAKE by Tricia | Marketing systems for brands that work smarter",
+  title: "Tricia Hilario | Digital Marketer & Social Media Strategist",
   description:
-    "Organic growth systems for growing brands. AI handles the repetitive work. Human judgment handles everything your audience can feel. Led by Tricia Hilario.",
+    "Independent digital marketer and social media strategist with 7+ years of experience helping brands across the US, UK, Australia, Singapore, and South Africa grow engaged audiences organically.",
 };
 
 export default function RootLayout({ children }) {

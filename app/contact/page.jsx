@@ -1,7 +1,7 @@
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "Contact | UNMAKE by Tricia",
+  title: "Contact | Tricia Hilario",
   description:
     "Tell me where you're stuck. I'll reply with a plan, clear pricing, and an honest read on fit.",
 };
@@ -80,7 +80,11 @@ export default function Contact() {
                 name="subject"
                 value="New quote request from un-make.com"
               />
-              <input type="hidden" name="from_name" value="UNMAKE website" />
+              <input
+                type="hidden"
+                name="from_name"
+                value="Tricia Hilario website"
+              />
               <input
                 type="hidden"
                 name="redirect"

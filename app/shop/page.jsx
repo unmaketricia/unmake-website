@@ -4,7 +4,7 @@ import CtaBand from "@/components/CtaBand";
 import { ETSY_URL } from "@/lib/etsy";
 
 export const metadata = {
-  title: "Shop | UNMAKE by Tricia",
+  title: "Shop | Tricia Hilario",
   description:
     "Digital products that clear mental clutter from family, money, and work. Start with No Toy Needed Vol. 1: 30 household-item activities for babies 0 to 6 months.",
 };
@@ -17,8 +17,8 @@ export default function Shop() {
           <p className="eyebrow">The shop</p>
           <h1>Less mental clutter, ready to download.</h1>
           <p className="lede">
-            Every planner asks more of you. UNMAKE asks less. Guides that work
-            the moment you open them.
+            Every planner asks more of you. These ask less. Guides that work the
+            moment you open them.
           </p>
         </div>
       </header>
@@ -74,7 +74,7 @@ export default function Shop() {
         <Reveal className="wrap">
           <div className="section-head">
             <p className="eyebrow">The collection</p>
-            <h2>Where UNMAKE is headed.</h2>
+            <h2>Where the shop is headed.</h2>
             <p>
               Products organized around where mental clutter piles up. Family is
               live. The rest are on the workbench.
@@ -104,7 +104,7 @@ export default function Shop() {
       <CtaBand
         title="Here for your brand instead?"
         text="The same systems thinking powers done-for-you marketing for growing brands."
-        href="/#offer"
+        href="/#services"
         cta="Explore services"
       />
     </>
