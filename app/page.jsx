@@ -71,7 +71,7 @@ export default function Home() {
         <div className="wrap about-hero">
           <div>
             <p className="eyebrow">Digital Marketer &amp; Social Media Strategist</p>
-            <h1>Hello, I&apos;m Tricia Hilario.</h1>
+            <h1>Hello, I&apos;m Tricia.</h1>
             <p className="lede">
               A retired banking and finance officer turned digital marketer,
               helping brands grow engaged audiences organically — authentically,
