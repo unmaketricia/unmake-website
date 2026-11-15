@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/studio", label: "Studio" },
-  { href: "/contact", label: "Contact" },
+  { href: "/studio/contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -21,10 +21,9 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // close the mobile menu whenever the route changes
   useEffect(() => setOpen(false), [pathname]);
 
-  const navClass = `nav${scrolled ? " scrolled" : ""}${open ? " open" : ""}`;
+  const navClass = "nav" + (scrolled ? " scrolled" : "") + (open ? " open" : "");
 
   return (
     <nav className={navClass}>
@@ -44,14 +43,13 @@ export default function Nav() {
               </Link>
             </li>
           ))}
-          {/* CTAs inside the mobile dropdown */}
           <li className="nav-menu-cta">
             <Link className="btn ghost" href="/studio#available">
               Shop Solutions
             </Link>
           </li>
           <li className="nav-menu-cta">
-            <Link className="btn" href="/contact">
+            <Link className="btn" href="/studio/contact">
               Contact
             </Link>
           </li>
@@ -60,7 +58,7 @@ export default function Nav() {
           <Link className="btn ghost" href="/studio#available">
             Shop Solutions
           </Link>
-          <Link className="btn" href="/contact">
+          <Link className="btn" href="/studio/contact">
             Contact
           </Link>
         </div>
@@ -78,5 +76,3 @@ export default function Nav() {
     </nav>
   );
 }
-
-
