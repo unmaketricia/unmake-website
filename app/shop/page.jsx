@@ -18,10 +18,25 @@ export default function Shop() {
           <h1>Simple solutions<br />for everyday life.</h1>
           <p className="lede">
             Downloadable resources and digital tools designed to make everyday life
-            easier. Web apps and more solutions are on the way.
+            easier.<br className="hidden sm:block" />
+            <span className="sm:whitespace-nowrap">Web apps and more solutions are on the way.</span>
           </p>
         </div>
       </header>
+
+      <section className="cream" id="the-table">
+        <Reveal className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">Featured web app · Available now</p>
+            <h2>The Table</h2>
+            <p>
+              A simple menu-planning web app to plan weekly meals, organize your
+              grocery list, and share the day&apos;s full menu with your household.
+            </p>
+            <a className="btn" href="/studio/contact">Ask about The Table</a>
+          </div>
+        </Reveal>
+      </section>
 
       <section className="cream" id="available">
         <Reveal className="wrap">
@@ -74,7 +89,7 @@ export default function Shop() {
         <Reveal className="wrap">
           <div className="section-head">
             <p className="eyebrow">The collection</p>
-            <h2>Where the studio is headed.</h2>
+            <h2 style={{ fontSize: "clamp(1.15rem, 4.6vw, 2rem)", whiteSpace: "nowrap" }}>Where the studio is headed.</h2>
             <p>
               A growing collection of practical resources, planners, and web apps for
               family, money, work, and home. Explore what is available now; more
@@ -89,25 +104,10 @@ export default function Shop() {
             <span className="soon whitespace-nowrap">Web apps · soon</span>
           </div>
           <p style={{ marginTop: "var(--s4)", color: "var(--muted)" }}>
-            Follow the creator on Threads and Instagram: {" "}
-            <a
-              className="textlink"
-              href="https://www.threads.net/@thenanayinpajama"
-              target="_blank"
-              rel="noopener"
-            >
-              @thenanayinpajama
-            </a>
-            {" · "}
-            <a
-              className="textlink"
-              href="https://www.instagram.com/thenanayinpajama"
-              target="_blank"
-              rel="noopener"
-            >
-              Instagram
-            </a>
-            .
+            Follow the creator on {" "}
+            <a className="textlink" href="https://www.threads.net/@thenanayinpajama" target="_blank" rel="noopener">Threads</a>
+            {" and "}
+            <a className="textlink" href="https://www.instagram.com/thenanayinpajama" target="_blank" rel="noopener">Instagram</a>.
           </p>
         </Reveal>
       </section>
