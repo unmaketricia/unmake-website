@@ -4,6 +4,7 @@ export const metadata = {
   title: "Contact | Tricia Hilario",
   description:
     "Tell me where you're stuck. I'll reply with a plan, clear pricing, and an honest read on fit.",
+  robots: { index: false, follow: false },
 };
 
 export default function Contact() {
@@ -163,3 +164,4 @@ export default function Contact() {
     </>
   );
 }
+
