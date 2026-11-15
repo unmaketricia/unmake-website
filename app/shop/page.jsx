@@ -33,7 +33,7 @@ export default function Shop() {
               A simple menu-planning web app to plan weekly meals, organize your
               grocery list, and share the day&apos;s full menu with your household.
             </p>
-            <a className="btn" href="/studio/contact">Ask about The Table</a>
+            <a className="btn" href="/table">Explore The Table</a>
           </div>
         </Reveal>
       </section>
