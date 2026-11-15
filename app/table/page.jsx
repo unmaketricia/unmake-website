@@ -110,7 +110,7 @@ export default function TablePage() {
         <Reveal className="wrap">
           <div className="section-head">
             <p className="eyebrow">A calmer way to plan</p>
-            <h2>From meal plan to grocery list, without the extra steps.</h2>
+            <h2>From grocery list to meal plan, without the extra steps.</h2>
             <p>
               You don’t need another system to maintain. The Table keeps meal planning
               and shopping close together, so it’s easy to start and easy to come back to.
@@ -229,3 +229,6 @@ export default function TablePage() {
     </>
   );
 }
+
+
+The focused UI element is 0 AXWebArea raw.githubusercontent.com/unmaketricia/unmake-website/refs/heads/main/app/table/page.jsx
