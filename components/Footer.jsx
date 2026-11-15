@@ -8,16 +8,14 @@ export default function Footer() {
         <div className="foot">
           <div>
             <div className="lockup">
-              <span className="mark">Tricia Hilario</span>
-              <span className="byline serif">Digital marketer</span>
+              <span className="mark">UNMAKE</span>
+              <span className="byline serif">Digital studio</span>
             </div>
-            <p className="tagline">Marketing that still sounds like you.</p>
+            <p className="tagline">Simple digital tools for everyday life.</p>
           </div>
           <div>
             <h4>Explore</h4>
-            <Link href="/#about">About</Link>
-            <Link href="/#work">Work</Link>
-            <Link href="/shop">Shop</Link>
+            <Link href="/studio">Studio</Link>
             <Link href="/contact">Contact</Link>
           </div>
           <div>
@@ -36,9 +34,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          © 2026 Tricia Hilario. Digital marketer &amp; social media strategist.
+          © 2026 UNMAKE. Digital products by Tricia Hilario.
         </div>
       </div>
     </footer>
   );
 }
+
