@@ -22,11 +22,18 @@ export default function Footer() {
             <h4>Connect</h4>
             <a href="mailto:tricia@un-make.com">tricia@un-make.com</a>
             <a
-              href="https://www.instagram.com/unmakeit"
+              href="https://www.threads.net/@thenanayinpajama"
               target="_blank"
               rel="noopener"
             >
-              Instagram @unmakeit
+              Threads @thenanayinpajama
+            </a>
+            <a
+              href="https://www.instagram.com/thenanayinpajama"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram @thenanayinpajama
             </a>
             <a href={ETSY_URL} target="_blank" rel="noopener">
               Etsy shop
