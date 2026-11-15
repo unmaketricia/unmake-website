@@ -26,14 +26,14 @@ export default function Footer() {
               target="_blank"
               rel="noopener"
             >
-              Threads @thenanayinpajama
+              Threads
             </a>
             <a
               href="https://www.instagram.com/thenanayinpajama"
               target="_blank"
               rel="noopener"
             >
-              Instagram @thenanayinpajama
+              Instagram
             </a>
             <a href={ETSY_URL} target="_blank" rel="noopener">
               Etsy shop
