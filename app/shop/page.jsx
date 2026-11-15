@@ -6,7 +6,7 @@ import { ETSY_URL } from "@/lib/etsy";
 export const metadata = {
   title: "Studio | UNMAKE",
   description:
-    "Digital products that clear mental clutter from family, money, and work. Start with No Toy Needed Vol. 1: 30 household-item activities for babies 0 to 6 months.",
+    "Practical digital solutions for everyday life, from downloadable resources to web apps. Explore what is available now and see what is coming to UNMAKE Studio.",
 };
 
 export default function Shop() {
@@ -15,15 +15,15 @@ export default function Shop() {
       <header className="hero tight">
         <div className="wrap">
           <p className="eyebrow">UNMAKE Studio</p>
-          <h1>Less mental clutter, ready to download.</h1>
+          <h1>Simple solutions for everyday life.</h1>
           <p className="lede">
-            Every planner asks more of you. These ask less. Guides that work the
-            moment you open them.
+            Downloadable resources and digital tools designed to make everyday life
+            easier. Web apps and more solutions are on the way.
           </p>
         </div>
       </header>
 
-      <section className="cream">
+      <section className="cream" id="available">
         <Reveal className="wrap">
           <div className="section-head">
             <p className="eyebrow">Available now</p>
@@ -76,8 +76,9 @@ export default function Shop() {
             <p className="eyebrow">The collection</p>
             <h2>Where the studio is headed.</h2>
             <p>
-              Products organized around where mental clutter piles up. Family is
-              live. The rest are on the workbench.
+              A growing collection of practical resources, planners, and web apps for
+              family, money, work, and home. Explore what is available now; more
+              solutions are on the way.
             </p>
           </div>
           <div className="cats">
@@ -85,9 +86,10 @@ export default function Shop() {
             <span className="soon">Money · soon</span>
             <span className="soon">Work · soon</span>
             <span className="soon">Home · soon</span>
+            <span className="soon">Web apps · soon</span>
           </div>
           <p style={{ marginTop: "var(--s4)", color: "var(--muted)" }}>
-            New products land here first. Follow along at{" "}
+            New solutions land here first. Follow along at{" "}
             <a
               className="textlink"
               href="https://www.instagram.com/unmakeit"
@@ -103,11 +105,12 @@ export default function Shop() {
 
       <CtaBand
         title="Have a question?"
-        text="Get in touch if you need help choosing a digital product."
+        text="Questions about a download or upcoming web app? Get in touch."
         href="/contact"
         cta="Contact us"
       />
     </>
   );
 }
+
 
