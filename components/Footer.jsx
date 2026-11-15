@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <h4>Explore</h4>
             <Link href="/studio">Studio</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/studio/contact">Contact</Link>
           </div>
           <div>
             <h4>Connect</h4>
@@ -40,4 +40,3 @@ export default function Footer() {
     </footer>
   );
 }
-
