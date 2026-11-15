@@ -15,7 +15,7 @@ export default function Shop() {
       <header className="hero tight">
         <div className="wrap">
           <p className="eyebrow">UNMAKE Studio</p>
-          <h1>Simple solutions for everyday life.</h1>
+          <h1>Simple solutions<br />for everyday life.</h1>
           <p className="lede">
             Downloadable resources and digital tools designed to make everyday life
             easier. Web apps and more solutions are on the way.
@@ -86,17 +86,26 @@ export default function Shop() {
             <span className="soon">Money · soon</span>
             <span className="soon">Work · soon</span>
             <span className="soon">Home · soon</span>
-            <span className="soon">Web apps · soon</span>
+            <span className="soon whitespace-nowrap">Web apps · soon</span>
           </div>
           <p style={{ marginTop: "var(--s4)", color: "var(--muted)" }}>
-            New solutions land here first. Follow along at{" "}
+            Follow the creator on Threads and Instagram: {" "}
             <a
               className="textlink"
-              href="https://www.instagram.com/unmakeit"
+              href="https://www.threads.net/@thenanayinpajama"
               target="_blank"
               rel="noopener"
             >
-              @unmakeit
+              @thenanayinpajama
+            </a>
+            {" · "}
+            <a
+              className="textlink"
+              href="https://www.instagram.com/thenanayinpajama"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
             </a>
             .
           </p>
@@ -112,5 +121,3 @@ export default function Shop() {
     </>
   );
 }
-
-
