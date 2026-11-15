@@ -100,7 +100,7 @@ export default function TablePage() {
               <Link className="btn" href="#purchase">Get The Table</Link>
               <Link className="textlink" href="#how-it-works">See how it works</Link>
             </div>
-            <p className="price-tag" style={{ marginTop: "var(--s3)" }}>$10 one time · no monthly subscription</p>
+            <p className="price-tag" style={{ marginTop: "var(--s3)" }}>$12 one time · no monthly subscription</p>
           </div>
           <PhotoPlaceholder title="The Table app preview" note="Replace with a screenshot of the weekly menu or home screen." />
         </div>
@@ -188,13 +188,13 @@ export default function TablePage() {
             <p className="eyebrow">One simple purchase</p>
             <h2>Make meal planning one less thing to figure out.</h2>
             <p>
-              Get The Table for a one-time price of $10. No monthly subscription.
+              Get The Table for a one-time price of $12. No monthly subscription.
               Checkout will be connected here once the payment portal is ready.
             </p>
           </div>
           <div style={{ maxWidth: "34rem", margin: "0 auto", padding: "2rem", textAlign: "center", border: "1px solid var(--line)", borderRadius: "18px", background: "var(--cream)" }}>
             <p className="eyebrow">The Table · web app</p>
-            <p style={{ fontSize: "clamp(2rem, 6vw, 3rem)", margin: "0.5rem 0" }}>$10</p>
+            <p style={{ fontSize: "clamp(2rem, 6vw, 3rem)", margin: "0.5rem 0" }}>$12</p>
             <p style={{ color: "var(--muted)" }}>one-time purchase · no recurring fee</p>
             <Link className="btn" href="/studio/contact">Ask about purchase access</Link>
             <p style={{ color: "var(--muted)", fontSize: "0.85rem", margin: "var(--s2) 0 0" }}>
