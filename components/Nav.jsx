@@ -5,9 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/#about", label: "About" },
-  { href: "/#work", label: "Work" },
-  { href: "/shop", label: "Shop" },
+  { href: "/studio", label: "Studio" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -82,3 +80,4 @@ export default function Nav() {
     </nav>
   );
 }
+
