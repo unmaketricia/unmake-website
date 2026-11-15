@@ -106,7 +106,7 @@ export default function Shop() {
       <CtaBand
         title="Have a question?"
         text="Questions about a download or upcoming web app? Get in touch."
-        href="/contact"
+        href="/studio/contact"
         cta="Contact us"
       />
     </>
