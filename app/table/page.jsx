@@ -229,6 +229,3 @@ export default function TablePage() {
     </>
   );
 }
-
-
-The focused UI element is 0 AXWebArea raw.githubusercontent.com/unmaketricia/unmake-website/refs/heads/main/app/table/page.jsx
