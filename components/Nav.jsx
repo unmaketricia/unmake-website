@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ETSY_URL } from "@/lib/etsy";
 
 const links = [
   { href: "/studio", label: "Studio" },
   { href: "/contact", label: "Contact" },
 ];
 
-const CALENDLY = "https://calendly.com/tricia-un-make/30min";
+const CALENDLY = ETSY_URL;
 
 export default function Nav() {
   const pathname = usePathname();
@@ -32,8 +33,8 @@ export default function Nav() {
     <nav className={navClass}>
       <div className="nav-inner">
         <Link href="/" className="lockup">
-          <span className="mark">Tricia Hilario</span>
-          <span className="byline serif">Digital marketer</span>
+          <span className="mark">UNMAKE</span>
+          <span className="byline serif">Digital studio</span>
         </Link>
         <ul className="nav-links">
           {links.map((l) => (
@@ -49,21 +50,21 @@ export default function Nav() {
           {/* CTAs inside the mobile dropdown */}
           <li className="nav-menu-cta">
             <a className="btn ghost" href={CALENDLY} target="_blank" rel="noopener">
-              Book a call
+              Shop Etsy
             </a>
           </li>
           <li className="nav-menu-cta">
             <Link className="btn" href="/contact">
-              Get a quote
+              Contact
             </Link>
           </li>
         </ul>
         <div className="nav-ctas">
           <a className="btn ghost" href={CALENDLY} target="_blank" rel="noopener">
-            Book a call
+            Shop Etsy
           </a>
           <Link className="btn" href="/contact">
-            Get a quote
+            Contact
           </Link>
         </div>
         <button
