@@ -40,6 +40,11 @@ export default function Footer() {
             </a>
           </div>
         </div>
+        <nav aria-label="Legal policies" className="flex flex-wrap gap-x-6 gap-y-2 mt-10">
+          <Link href="/terms">Terms of Service</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/refunds">Refund Policy</Link>
+        </nav>
         <div className="foot-bottom">
           © 2026 UNMAKE. Digital products by Tricia Hilario.
         </div>
