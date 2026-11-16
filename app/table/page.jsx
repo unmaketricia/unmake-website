@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import TableCheckout from "@/components/TableCheckout";
 
 export const metadata = {
   title: "The Table | Simple Meal Planning for Real Life | UNMAKE",
@@ -189,16 +190,16 @@ export default function TablePage() {
             <h2>Make meal planning one less thing to figure out.</h2>
             <p>
               Get The Table for a one-time price of $12. No monthly subscription.
-              Checkout will be connected here once the payment portal is ready.
+              Applicable taxes are calculated at checkout.
             </p>
           </div>
           <div style={{ maxWidth: "34rem", margin: "0 auto", padding: "2rem", textAlign: "center", border: "1px solid var(--line)", borderRadius: "18px", background: "var(--cream)" }}>
             <p className="eyebrow">The Table · web app</p>
             <p style={{ fontSize: "clamp(2rem, 6vw, 3rem)", margin: "0.5rem 0" }}>$12</p>
             <p style={{ color: "var(--muted)" }}>one-time purchase · no recurring fee</p>
-            <Link className="btn" href="/studio/contact">Ask about purchase access</Link>
+            <TableCheckout enabled={process.env.TABLE_CHECKOUT_ENABLED === "true"} />
             <p style={{ color: "var(--muted)", fontSize: "0.85rem", margin: "var(--s2) 0 0" }}>
-              The checkout portal is being set up. You can contact UNMAKE for purchase details in the meantime.
+              <Link href="/terms">Terms</Link> · <Link href="/privacy">Privacy</Link> · <Link href="/refunds">14-day refund policy</Link>
             </p>
           </div>
         </Reveal>
