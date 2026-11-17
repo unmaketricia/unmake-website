@@ -19,7 +19,7 @@ export default function Shop() {
           <p className="lede">
             Downloadable resources and digital tools designed to make everyday life
             easier.<br className="hidden sm:block" />
-            <span className="sm:whitespace-nowrap">Web apps and more solutions are on the way.</span>
+            <span className="sm:whitespace-nowrap">Meal planning, grocery lists, and more in The Table.</span>
           </p>
         </div>
       </header>
@@ -27,7 +27,7 @@ export default function Shop() {
       <section className="cream" id="the-table">
         <Reveal className="wrap">
           <div className="section-head">
-            <p className="eyebrow">Featured web app · Available now</p>
+            <p className="eyebrow">Featured web app</p>
             <h2>The Table</h2>
             <p>
               A simple menu-planning web app to plan weekly meals, organize your
@@ -101,7 +101,7 @@ export default function Shop() {
             <span className="soon">Money · soon</span>
             <span className="soon">Work · soon</span>
             <span className="soon">Home · soon</span>
-            <span className="soon whitespace-nowrap">Web apps · soon</span>
+            <span className="soon whitespace-nowrap">Web apps</span>
           </div>
           <p style={{ marginTop: "var(--s4)", color: "var(--muted)" }}>
             Follow the creator on {" "}
@@ -114,7 +114,7 @@ export default function Shop() {
 
       <CtaBand
         title="Have a question?"
-        text="Questions about a download or upcoming web app? Get in touch."
+        text="Questions about a download or The Table? Get in touch."
         href="/studio/contact"
         cta="Contact us"
       />

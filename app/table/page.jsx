@@ -8,30 +8,43 @@ export const metadata = {
     "Plan your meals and see what needs to be bought with The Table, a straightforward meal-planning web app for busy people and households. No calorie counting or complicated setup.",
 };
 
-function PhotoPlaceholder({ title, note }) {
+function ProductPreview({ kind = "week" }) {
+  const examples = {
+    week: {
+      title: "A week at The Table",
+      caption: "Example meal plan",
+      rows: [["Monday", "Chicken and vegetable rice"], ["Tuesday", "Pasta with tomato sauce"], ["Wednesday", "Fish, rice, and greens"], ["Thursday", "Vegetable stir-fry"], ["Friday", "Homemade burgers"]],
+    },
+    day: {
+      title: "Meals for your day",
+      caption: "Example daily menu",
+      rows: [["Breakfast", "Eggs and toast"], ["Lunch", "Chicken and vegetable rice"], ["Dinner", "Pasta with tomato sauce"], ["Snack", "Fruit and yogurt"]],
+    },
+    grocery: {
+      title: "Remember what to buy",
+      caption: "Example grocery list",
+      rows: [["Produce", "Carrots, tomatoes, and greens"], ["Main ingredient", "Chicken and fish"], ["Pantry", "Rice and pasta"], ["Dairy", "Milk and yogurt"]],
+    },
+  };
+  const example = examples[kind] || examples.week;
   return (
-    <div
-      role="img"
-      aria-label={title}
-      style={{
-        aspectRatio: "4 / 3",
-        minHeight: "260px",
-        padding: "var(--s4)",
-        display: "grid",
-        placeItems: "center",
-        textAlign: "center",
-        border: "1px dashed #8da2a7",
-        borderRadius: "18px",
-        background: "linear-gradient(145deg, #e8e7e1 0%, #f5f2ec 52%, #dfe7e5 100%)",
-        color: "var(--ink)",
-      }}
-    >
-      <div>
-        <p className="eyebrow">{title}</p>
-        <p style={{ fontSize: "1.1rem", margin: "var(--s2) 0 0" }}>Photo placeholder</p>
-        <p style={{ color: "var(--muted)", fontSize: "0.9rem", margin: "0.4rem 0 0" }}>{note}</p>
+    <figure style={{ margin: 0, border: "1px solid var(--line)", borderRadius: "18px", overflow: "hidden", background: "var(--cream)" }}>
+      <div style={{ background: "var(--teal-deep)", color: "var(--cream)", padding: "1.5rem" }}>
+        <p style={{ margin: "0 0 0.4rem", fontSize: "0.8rem", letterSpacing: "0.12em" }}>THE TABLE</p>
+        <h3 style={{ margin: 0, color: "inherit", fontSize: "1.5rem" }}>{example.title}</h3>
       </div>
-    </div>
+      <dl style={{ padding: "0.5rem 1.5rem", margin: 0 }}>
+        {example.rows.map(([label, value]) => (
+          <div key={label} style={{ padding: "0.85rem 0", borderBottom: "1px solid var(--line)" }}>
+            <dt style={{ fontWeight: 500, fontSize: "0.85rem", color: "var(--teal-deep)" }}>{label}</dt>
+            <dd style={{ margin: "0.2rem 0 0", fontSize: "0.95rem" }}>{value}</dd>
+          </div>
+        ))}
+      </dl>
+      <figcaption style={{ padding: "0.75rem 1.5rem 1.25rem", fontSize: "0.8rem", color: "var(--muted)" }}>
+        {example.caption}. Illustrative layout with sample entries.
+      </figcaption>
+    </figure>
   );
 }
 
@@ -103,7 +116,7 @@ export default function TablePage() {
             </div>
             <p className="price-tag" style={{ marginTop: "var(--s3)" }}>$12 one time · no monthly subscription</p>
           </div>
-          <PhotoPlaceholder title="The Table app preview" note="Replace with a screenshot of the weekly menu or home screen." />
+          <ProductPreview kind="week" />
         </div>
       </header>
 
@@ -146,7 +159,7 @@ export default function TablePage() {
               <li>Useful for a household, not just one person’s meal plan</li>
             </ul>
           </div>
-          <PhotoPlaceholder title="Weekly menu view" note="Replace with a screenshot of a planned week." />
+          <ProductPreview kind="day" />
         </Reveal>
       </section>
 
@@ -170,7 +183,7 @@ export default function TablePage() {
 
       <section>
         <Reveal className="wrap grid items-center gap-10 md:grid-cols-2">
-          <PhotoPlaceholder title="Grocery list view" note="Replace with a screenshot of the list generated from your menu." />
+          <ProductPreview kind="grocery" />
           <div>
             <p className="eyebrow">Spend less time figuring it out</p>
             <h2>Make the plan happen with what you actually need.</h2>

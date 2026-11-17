@@ -19,10 +19,10 @@ const lora = Lora({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://un-make.com"),
-  title: "Tricia Hilario | Digital Marketer & Social Media Strategist",
+  metadataBase: new URL("https://www.un-make.com"),
+  title: "UNMAKE Studio | Simple web apps and digital tools",
   description:
-    "Independent digital marketer and social media strategist with 7+ years of experience helping brands across the US, UK, Australia, Singapore, and South Africa grow engaged audiences organically.",
+    "UNMAKE Studio creates simple web apps and digital tools for everyday life, including The Table for meal planning and grocery organization.",
 };
 
 export default function RootLayout({ children }) {

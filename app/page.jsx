@@ -1,5 +1,1 @@
-import { redirect } from "next/navigation";
-
-export default function Home() {
-  redirect("/studio");
-}
+export { default, metadata } from "./studio/page";
