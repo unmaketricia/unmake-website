@@ -1,3 +1,4 @@
+import { socialMetadata } from "@/lib/site-metadata";
 import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -13,10 +14,11 @@ const kalam = localFont({
 });
 
 export const metadata = {
+  ...socialMetadata("Unmake Studio | Simple web apps and digital tools", "Unmake Studio creates simple web apps and digital tools for everyday life, including The Table for meal planning and grocery organization."),
   metadataBase: new URL("https://www.un-make.com"),
-  title: "UNMAKE Studio | Simple web apps and digital tools",
+  title: "Unmake Studio | Simple web apps and digital tools",
   description:
-    "UNMAKE Studio creates simple web apps and digital tools for everyday life, including The Table for meal planning and grocery organization.",
+    "Unmake Studio creates simple web apps and digital tools for everyday life, including The Table for meal planning and grocery organization.",
 };
 
 export default function RootLayout({ children }) {

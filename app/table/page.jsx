@@ -1,10 +1,12 @@
+import { socialMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import TableCheckout from "@/components/TableCheckout";
 import EditorialIllustration from "@/components/EditorialIllustration";
 
 export const metadata = {
-  title: "The Table | Simple Meal Planning for Real Life | UNMAKE",
+  ...socialMetadata("The Table | Simple Meal Planning for Real Life | Unmake Studio", "Plan your meals and see what needs to be bought with The Table, a straightforward meal-planning web app for busy people and households. No calorie counting or complicated setup."),
+  title: "The Table | Simple Meal Planning for Real Life | Unmake Studio",
   description:
     "Plan your meals and see what needs to be bought with The Table, a straightforward meal-planning web app for busy people and households. No calorie counting or complicated setup.",
 };

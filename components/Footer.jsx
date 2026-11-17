@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="lockup">
               <span className="mark">UNMAKE</span>
-              <span className="byline serif">Digital studio</span>
+              <span className="byline serif">Digital Studio</span>
             </div>
             <p className="tagline">Simple digital tools for everyday life.</p>
           </div>

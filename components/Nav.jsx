@@ -31,7 +31,7 @@ export default function Nav() {
       <div className="nav-inner">
         <Link href="/" className="lockup">
           <span className="mark">UNMAKE</span>
-          <span className="byline serif">Digital studio</span>
+          <span className="byline serif">Digital Studio</span>
         </Link>
         <ul className="nav-links">
           {links.map((l) => (

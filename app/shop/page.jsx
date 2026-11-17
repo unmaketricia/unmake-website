@@ -1,3 +1,4 @@
+import { socialMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
@@ -5,9 +6,10 @@ import { ETSY_URL } from "@/lib/etsy";
 import EditorialIllustration from "@/components/EditorialIllustration";
 
 export const metadata = {
-  title: "Studio | UNMAKE",
+  ...socialMetadata("Studio | Unmake Studio", "Practical digital solutions for everyday life, from downloadable resources to web apps. Explore what is available now and see what is coming to Unmake Studio."),
+  title: "Studio | Unmake Studio",
   description:
-    "Practical digital solutions for everyday life, from downloadable resources to web apps. Explore what is available now and see what is coming to UNMAKE Studio.",
+    "Practical digital solutions for everyday life, from downloadable resources to web apps. Explore what is available now and see what is coming to Unmake Studio.",
 };
 
 export default function Shop() {
@@ -16,7 +18,7 @@ export default function Shop() {
       <header className="hero tight studio-hero">
         <div className="wrap studio-hero-grid">
           <div>
-          <p className="eyebrow">UNMAKE Studio</p>
+          <p className="eyebrow">Unmake Studio</p>
           <h1>Simple solutions<br />for everyday life.</h1>
           <p className="lede">
             Downloadable resources and digital tools designed to make everyday life
