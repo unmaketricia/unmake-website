@@ -130,8 +130,9 @@ export default function TablePage() {
             <p className="eyebrow">A calmer way to plan</p>
             <h2>From grocery list to meal plan, without the extra steps.</h2>
             <p>
-              You don’t need another system to maintain. The Table keeps meal planning
-              and shopping close together, so it’s easy to start and easy to come back to.
+              A clear weekly menu and a grocery list that stays close to your plan.
+              No calorie targets or complicated setup—just what your household needs,
+              in one straightforward place that’s easy to come back to.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -143,27 +144,6 @@ export default function TablePage() {
               </article>
             ))}
           </div>
-        </Reveal>
-      </section>
-
-      <section>
-        <Reveal className="wrap grid items-center gap-10 md:grid-cols-2">
-          <div>
-            <p className="eyebrow">Made to feel straightforward</p>
-            <h2>Open it. Plan your meals. Know what to buy.</h2>
-            <p>
-              If other meal-planning apps felt like one more thing to learn, The Table
-              was made for a lighter start. It doesn’t ask you to count calories or
-              spend time setting up a complicated routine. Your menu and grocery needs
-              stay front and center.
-            </p>
-            <ul style={{ paddingLeft: "1.25rem", color: "var(--muted)" }}>
-              <li>Simple screens and a clear weekly menu</li>
-              <li>Grocery planning tied to meals you intend to make</li>
-              <li>Useful for a household, not just one person’s meal plan</li>
-            </ul>
-          </div>
-          <ProductPreview kind="day" />
         </Reveal>
       </section>
 
