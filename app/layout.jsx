@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import WebAnalytics from "@/components/WebAnalytics";
 
 const kalam = localFont({
   src: [
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
         <Footer />
+        <WebAnalytics />
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ const policies = [
   { href: "/refunds", label: "Refund Policy" },
 ];
 
-export default function PolicyPage({ title, intro, children }) {
+export default function PolicyPage({ title, intro, children, updated = "November 17, 2026" }) {
   return (
     <main>
       <header className="hero tight">
@@ -14,7 +14,7 @@ export default function PolicyPage({ title, intro, children }) {
           <p className="eyebrow">UNMAKE Studio · Policies</p>
           <h1 style={{ maxWidth: "20ch" }}>{title}</h1>
           <p className="lede" style={{ maxWidth: "55ch" }}>{intro}</p>
-          <p style={{ color: "var(--muted)", fontSize: "0.9rem" }}>Last updated: November 17, 2026</p>
+          <p style={{ color: "var(--muted)", fontSize: "0.9rem" }}>Last updated: {updated}</p>
         </div>
       </header>
       <section className="cream tight">

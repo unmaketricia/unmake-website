@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <PolicyPage title="Privacy Policy" intro="How we handle personal information when you visit UNMAKE, contact us, or use our digital products.">
+    <PolicyPage updated="November 18, 2026" title="Privacy Policy" intro="How we handle personal information when you visit UNMAKE, contact us, or use our digital products.">
       <div>
         <h2>1. Who is responsible</h2>
         <p>UNMAKE Studio is operated by Tricia Hilario in the Philippines. We are responsible for the personal information we collect to run our website and products. Contact <a href="mailto:tricia@un-make.com">tricia@un-make.com</a> with privacy questions or requests. This policy covers un-make.com and UNMAKE products that link to it.</p>
@@ -36,6 +36,7 @@ export default function PrivacyPage() {
       </div>
       <div>
         <h2>5. Cookies and device storage</h2>
+        <p>We use Vercel Web Analytics to understand traffic to our public website, including page views, referral sources, approximate location, and browser and device types. This analytics setup does not use cookies or record form contents or private household pages. We remove query strings and fragments from page URLs before sending page-view events. Statistics are shown in aggregate. See <a href="https://vercel.com/docs/analytics/privacy-policy">Vercel’s analytics privacy information</a> for details.</p>
         <p>Websites, apps, and checkout providers may use cookies or local storage for essential functions such as remembering a session, storing preferences, securing checkout, or saving entries on your device. Clearing browser storage may remove locally saved entries or sign you out.</p>
         <p>You can manage cookies through your browser, although blocking necessary storage can affect features. If we introduce optional analytics or advertising cookies that require consent, we will request that consent before enabling them. External social and marketplace links lead to sites with their own privacy practices.</p>
       </div>
