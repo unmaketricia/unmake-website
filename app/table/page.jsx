@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import TableCheckout from "@/components/TableCheckout";
+import EditorialIllustration from "@/components/EditorialIllustration";
 
 export const metadata = {
   title: "The Table | Simple Meal Planning for Real Life | UNMAKE",
@@ -116,7 +117,10 @@ export default function TablePage() {
             </div>
             <p className="price-tag" style={{ marginTop: "var(--s3)" }}>$12 one time · no monthly subscription</p>
           </div>
-          <ProductPreview kind="week" />
+          <div className="table-hero-preview">
+            <ProductPreview kind="week" />
+            <EditorialIllustration scene="weekly" className="table-hero-spot" />
+          </div>
         </div>
       </header>
 
@@ -171,8 +175,9 @@ export default function TablePage() {
             <p>All the practical parts of planning meals, without turning it into a project.</p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
+            {features.map((feature, index) => (
               <article key={feature.title} style={{ padding: "1.35rem", border: "1px solid var(--line)", borderRadius: "16px", background: "var(--cream)" }}>
+                <EditorialIllustration scene={["weekly", "groceries", "favorites", "custom", "inventory", "sharing"][index]} className="table-feature-illustration" />
                 <h3>{feature.title}</h3>
                 <p style={{ color: "var(--muted)", marginBottom: 0 }}>{feature.text}</p>
               </article>

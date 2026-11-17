@@ -1,0 +1,61 @@
+/* Original UNMAKE editorial art. Accent values mirror The Table palettes. */
+.editorial-illustration {
+  --illustration-navy: #2F4156;
+  --illustration-sage: #3D604B;
+  --illustration-sand: #725121;
+  --illustration-terracotta: #894B39;
+  --illustration-rose: #865A70;
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  flex: none;
+}
+.editorial-illustration > img {
+  position: absolute;
+  left: calc(var(--art-column) * -100%);
+  top: calc(var(--art-row) * -100%);
+  width: 300%;
+  height: 300%;
+  max-width: none;
+  object-fit: fill;
+}
+.studio-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+}
+.studio-hero-art { max-width: 420px; justify-self: end; }
+.studio-table-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: var(--s5);
+}
+.studio-table-feature .section-head { margin-bottom: 0; }
+.studio-table-art { max-width: 310px; justify-self: center; }
+.studio-collection-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  align-items: center;
+  gap: var(--s4);
+}
+.studio-budget-art { width: 240px; justify-self: end; }
+.table-feature-illustration { width: 108px; margin-bottom: 20px; }
+.table-hero-preview { min-width: 0; position: relative; }
+.table-hero-spot { width: 118px; margin: 20px 12px 0 auto; }
+@media (max-width: 860px) {
+  .studio-hero-grid, .studio-table-feature, .studio-collection-story {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s3);
+  }
+  .studio-hero-art { max-width: 260px; justify-self: center; }
+  .studio-table-art { max-width: 230px; justify-self: center; }
+  .studio-budget-art { width: 170px; justify-self: end; }
+  .table-hero-spot { width: 92px; margin-top: 16px; }
+}
+@media (max-width: 520px) {
+  .table-feature-illustration { width: 88px; margin-bottom: 16px; }
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 import { ETSY_URL } from "@/lib/etsy";
+import EditorialIllustration from "@/components/EditorialIllustration";
 
 export const metadata = {
   title: "Studio | UNMAKE",
@@ -13,7 +14,8 @@ export default function Shop() {
   return (
     <>
       <header className="hero tight">
-        <div className="wrap">
+        <div className="wrap studio-hero-grid">
+          <div>
           <p className="eyebrow">UNMAKE Studio</p>
           <h1>Simple solutions<br />for everyday life.</h1>
           <p className="lede">
@@ -21,11 +23,13 @@ export default function Shop() {
             easier.<br className="hidden sm:block" />
             <span className="sm:whitespace-nowrap">Meal planning, grocery lists, and more in The Table.</span>
           </p>
+          </div>
+          <EditorialIllustration scene="studio" className="studio-hero-art" label="A person planning the day with a notebook, a mug, and a houseplant." priority />
         </div>
       </header>
 
       <section className="cream" id="the-table">
-        <Reveal className="wrap">
+        <Reveal className="wrap studio-table-feature">
           <div className="section-head">
             <p className="eyebrow">Featured web app</p>
             <h2>The Table</h2>
@@ -37,6 +41,7 @@ export default function Shop() {
               <a className="btn" style={{ justifyContent: "center", textAlign: "center" }} href="/table">Explore The Table</a>
             </div>
           </div>
+          <EditorialIllustration scene="table" className="studio-table-art" label="A grocery bag, fresh produce, and a weekly meal plan for The Table." />
         </Reveal>
       </section>
 
@@ -88,7 +93,8 @@ export default function Shop() {
       </section>
 
       <section>
-        <Reveal className="wrap">
+        <Reveal className="wrap studio-collection-story">
+          <div>
           <div className="section-head">
             <p className="eyebrow">The collection</p>
             <h2 style={{ fontSize: "clamp(1.15rem, 4.6vw, 2rem)", whiteSpace: "nowrap" }}>Where the studio is headed.</h2>
@@ -111,6 +117,8 @@ export default function Shop() {
             {" and "}
             <a className="textlink" href="https://www.instagram.com/thenanayinpajama" target="_blank" rel="noopener">Instagram</a>.
           </p>
+          </div>
+          <EditorialIllustration scene="budget" className="studio-budget-art" label="A budget notebook, calculator, and coins for KACHING!" />
         </Reveal>
       </section>
 
