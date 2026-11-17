@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
     return [
-      { source: "/table/app/:path*", destination: "https://the-table-commercial-50c6mtdan-unmake.vercel.app/table/app/:path*" },
+      { source: "/table/app/:path*", destination: "https://the-table-commercial.vercel.app/table/app/:path*" },
     ];
   },
   async redirects() {
