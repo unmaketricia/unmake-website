@@ -24,7 +24,7 @@ function ProductPreview({ kind = "week" }) {
     grocery: {
       title: "Remember what to buy",
       caption: "Example grocery list",
-      rows: [["Produce", "Carrots, tomatoes, and greens"], ["Main ingredient", "Chicken and fish"], ["Pantry", "Rice and pasta"], ["Dairy", "Milk and yogurt"]],
+      rows: [["", "Carrots"], ["", "Tomatoes"], ["", "Greens"], ["", "Chicken"], ["", "Rice"], ["", "Milk"]],
     },
   };
   const example = examples[kind] || examples.week;
@@ -34,6 +34,13 @@ function ProductPreview({ kind = "week" }) {
         <p style={{ margin: "0 0 0.4rem", fontSize: "0.8rem", letterSpacing: "0.12em" }}>THE TABLE</p>
         <h3 style={{ margin: 0, color: "inherit", fontSize: "1.5rem" }}>{example.title}</h3>
       </div>
+      {kind === "grocery" ? (
+        <ul className="table-grocery-preview" aria-label="Example grocery items">
+          {example.rows.map(([, value]) => (
+            <li key={value}><span className="table-grocery-check" aria-hidden="true" /><span>{value}</span></li>
+          ))}
+        </ul>
+      ) : (
       <dl style={{ padding: "0.5rem 1.5rem", margin: 0 }}>
         {example.rows.map(([label, value]) => (
           <div key={label} style={{ padding: "0.85rem 0", borderBottom: "1px solid var(--line)" }}>
@@ -42,6 +49,8 @@ function ProductPreview({ kind = "week" }) {
           </div>
         ))}
       </dl>
+      )}
+
       <figcaption style={{ padding: "0.75rem 1.5rem 1.25rem", fontSize: "0.8rem", color: "var(--muted)" }}>
         {example.caption}. Illustrative layout with sample entries.
       </figcaption>
@@ -181,27 +190,7 @@ export default function TablePage() {
         </Reveal>
       </section>
 
-      <section className="cream" id="purchase">
-        <Reveal className="wrap">
-          <div className="section-head">
-            <p className="eyebrow">One simple purchase</p>
-            <h2>Make meal planning one less thing to figure out.</h2>
-            <p>
-              Get The Table for a one-time price of $12. No monthly subscription.
-              Applicable taxes are calculated at checkout.
-            </p>
-          </div>
-          <div style={{ maxWidth: "34rem", margin: "0 auto", padding: "2rem", textAlign: "center", border: "1px solid var(--line)", borderRadius: "18px", background: "var(--cream)" }}>
-            <p className="eyebrow">The Table · web app</p>
-            <p style={{ fontSize: "clamp(2rem, 6vw, 3rem)", margin: "0.5rem 0" }}>$12</p>
-            <p style={{ color: "var(--muted)" }}>one-time purchase · no recurring fee</p>
-            <TableCheckout enabled={process.env.TABLE_CHECKOUT_ENABLED === "true"} />
-            <p style={{ color: "var(--muted)", fontSize: "0.85rem", margin: "var(--s2) 0 0" }}>
-              <Link href="/terms">Terms</Link> · <Link href="/privacy">Privacy</Link> · <Link href="/refunds">14-day refund policy</Link>
-            </p>
-          </div>
-        </Reveal>
-      </section>
+
 
       <section>
         <Reveal className="wrap">
@@ -222,6 +211,27 @@ export default function TablePage() {
               <summary>Can I plan for different needs in my home?</summary>
               <p style={{ color: "var(--muted)" }}>The Table is designed to support additional menus for preferences, dietary needs, babies, toddlers, and other household routines.</p>
             </details>
+          </div>
+        </Reveal>
+      </section>
+      <section className="cream table-purchase" id="purchase">
+        <Reveal className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">One simple purchase</p>
+            <h2>Make meal planning one less thing to figure out.</h2>
+            <p>
+              Get The Table for a one-time price of $12. No monthly subscription.
+              Applicable taxes are calculated at checkout.
+            </p>
+          </div>
+          <div style={{ maxWidth: "34rem", margin: "0 auto", padding: "2rem", textAlign: "center", border: "1px solid var(--line)", borderRadius: "18px", background: "var(--cream)" }}>
+            <p className="eyebrow">The Table · web app</p>
+            <p style={{ fontSize: "clamp(2rem, 6vw, 3rem)", margin: "0.5rem 0" }}>$12</p>
+            <p style={{ color: "var(--muted)" }}>one-time purchase · no recurring fee</p>
+            <TableCheckout enabled={process.env.TABLE_CHECKOUT_ENABLED === "true"} />
+            <p style={{ color: "var(--muted)", fontSize: "0.85rem", margin: "var(--s2) 0 0" }}>
+              <Link href="/terms">Terms</Link> · <Link href="/privacy">Privacy</Link> · <Link href="/refunds">14-day refund policy</Link>
+            </p>
           </div>
         </Reveal>
       </section>

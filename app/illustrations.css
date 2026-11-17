@@ -77,3 +77,11 @@
   .studio-hero.hero.tight { padding-bottom: var(--s2); }
   .studio-hero + #the-table { padding-top: var(--s3); }
 }
+
+/* A centered final purchase prompt, following the FAQs. */
+.table-purchase .section-head { max-width: 46rem; margin: 0 auto var(--s4); text-align: center; }
+.table-purchase .section-head > p { margin-left: auto; margin-right: auto; }
+.table-purchase .eyebrow { justify-content: center; }
+.table-grocery-preview { list-style: none; margin: 0; padding: 0.5rem 1.5rem; }
+.table-grocery-preview li { display: flex; align-items: center; gap: 12px; padding: 0.85rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+.table-grocery-check { width: 17px; height: 17px; flex: none; border: 1px solid var(--teal-deep); border-radius: 3px; }
