@@ -19,7 +19,11 @@ export default function EditorialIllustration({
   label,
   priority = false,
 }) {
-  const [column, row] = scenes[scene] || scenes.studio;
+  // Object-based compositions replace the former character illustrations.
+  const isOriginalPair = scene === "studio" || scene === "sharing";
+  const [column, row] = isOriginalPair
+    ? [scene === "studio" ? 0 : 1, 0]
+    : scenes[scene] || scenes.table;
   return (
     <span
       className={`editorial-illustration ${className}`}
@@ -29,10 +33,11 @@ export default function EditorialIllustration({
       aria-hidden={label ? undefined : true}
     >
       <Image
-        src="/images/studio-editorial-atlas.png"
+        src={isOriginalPair ? "/images/unmake-worktable-sharing.png" : "/images/studio-editorial-atlas.png"}
+        style={isOriginalPair ? { width: "200%", height: "100%" } : undefined}
         alt=""
-        width={1254}
-        height={1254}
+        width={isOriginalPair ? 1774 : 1254}
+        height={isOriginalPair ? 887 : 1254}
         sizes="1254px"
         quality={85}
         priority={priority}
