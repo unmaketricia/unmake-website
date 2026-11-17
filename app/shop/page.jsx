@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Shop() {
   return (
-    <>
+    <main className="marketing-page studio-page">
       <header className="hero tight studio-hero">
         <div className="wrap studio-hero-grid">
           <div>
@@ -22,8 +22,7 @@ export default function Shop() {
           <h1>Simple solutions<br />for everyday life.</h1>
           <p className="lede">
             Downloadable resources and digital tools designed to make everyday life
-            easier.<br className="hidden sm:block" />
-            <span className="sm:whitespace-nowrap">Meal planning, grocery lists, and more in The Table.</span>
+            easier. Meal planning, grocery lists, and more in The Table.
           </p>
           </div>
           <EditorialIllustration scene="studio" className="studio-hero-art" label="A woman with curly hair and round glasses arranging planning cards at her studio table." priority />
@@ -60,7 +59,7 @@ export default function Shop() {
               src="/images/no-toy-needed-cover.jpg"
               alt="No Toy Needed, Vol. 1 — 30 printable baby activities"
             />
-            <div>
+            <div className="product-copy">
               <span className="pill-badge">Family · Babies 0–6 months</span>
               <p style={{ color: "var(--muted)", marginBottom: "var(--s2)" }}>
                 Thirty developmental activities for your baby&apos;s first six
@@ -130,6 +129,6 @@ export default function Shop() {
         href="/studio/contact"
         cta="Contact us"
       />
-    </>
+    </main>
   );
 }

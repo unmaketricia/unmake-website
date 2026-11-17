@@ -85,3 +85,49 @@
 .table-grocery-preview { list-style: none; margin: 0; padding: 0.5rem 1.5rem; }
 .table-grocery-preview li { display: flex; align-items: center; gap: 12px; padding: 0.85rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
 .table-grocery-check { width: 17px; height: 17px; flex: none; border: 1px solid var(--teal-deep); border-radius: 3px; }
+
+/* Consistent reading edges and spacing for the Studio and sales pages. */
+.marketing-page .lede,
+.marketing-page .section-head > p:not(.eyebrow),
+.marketing-page .product-copy > p:first-of-type,
+.table-page .table-feature-card > p:not(.eyebrow),
+.table-page .table-story-copy > p:not(.eyebrow),
+.table-page .table-faq-list details > p {
+  text-align: justify;
+  text-align-last: start;
+  text-justify: inter-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.marketing-page section { padding-block: var(--s6); }
+.marketing-page .section-head { margin-bottom: var(--s4); }
+.marketing-page .studio-table-feature .section-head { margin-bottom: 0; }
+.marketing-page h2 + p:not(.eyebrow) { margin-top: var(--s2); }
+.marketing-page h3 + p:not(.eyebrow) { margin-top: 12px; }
+.marketing-page .hero .lede { margin-block: var(--s3); }
+.marketing-page .lede { max-width: 100%; }
+.marketing-page .section-head > p:not(.eyebrow) { max-width: 100%; }
+.marketing-page .btn { justify-content: center; text-align: center; min-height: 48px; line-height: 1.4; }
+.marketing-page .wrap > *, .marketing-page .grid > *, .marketing-page .product > * { min-width: 0; }
+.table-page .table-feature-card h3 { line-height: 1.25; }
+.table-page .table-story-copy > .textlink { display: inline-block; margin-top: var(--s3); }
+.table-page .table-faq .section-head { max-width: 48rem; margin-inline: auto; }
+.table-page .table-faq-list details > p { margin-top: 12px; max-width: 100%; }
+.table-page .table-purchase .section-head > p,
+.marketing-page .cta-band > p {
+  text-align: center;
+  text-align-last: auto;
+  hyphens: manual;
+}
+.table-page .table-purchase-card > p { margin-inline: auto; }
+@media (min-width: 640px) {
+  .table-page #features .table-feature-card h3 { min-height: 2.5em; }
+}
+@media (min-width: 768px) {
+  .table-page #how-it-works .table-feature-card h3 { min-height: 2.5em; }
+}
+@media (max-width: 520px) {
+  .marketing-page .lede { font-size: 1.1rem; line-height: 1.65; }
+  .marketing-page .section-head { margin-bottom: var(--s3); }
+  .marketing-page .btn { max-width: 100%; }
+}

@@ -107,7 +107,7 @@ const features = [
 
 export default function TablePage() {
   return (
-    <>
+    <main className="marketing-page table-page">
       <header className="hero tight">
         <div className="wrap grid items-center gap-10 md:grid-cols-2">
           <div>
@@ -148,7 +148,7 @@ export default function TablePage() {
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {steps.map((step) => (
-              <article key={step.number} style={{ padding: "1.5rem", border: "1px solid var(--line)", borderRadius: "16px", background: "var(--cream)" }}>
+              <article className="table-feature-card" key={step.number} style={{ padding: "1.5rem", border: "1px solid var(--line)", borderRadius: "16px", background: "var(--cream)" }}>
                 <p className="eyebrow">{step.number}</p>
                 <h3>{step.title}</h3>
                 <p style={{ color: "var(--muted)" }}>{step.text}</p>
@@ -167,7 +167,7 @@ export default function TablePage() {
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <article key={feature.title} style={{ padding: "1.35rem", border: "1px solid var(--line)", borderRadius: "16px", background: "var(--cream)" }}>
+              <article className="table-feature-card" key={feature.title} style={{ padding: "1.35rem", border: "1px solid var(--line)", borderRadius: "16px", background: "var(--cream)" }}>
                 <EditorialIllustration scene={["weekly", "groceries", "favorites", "custom", "inventory", "sharing"][index]} className="table-feature-illustration" />
                 <h3>{feature.title}</h3>
                 <p style={{ color: "var(--muted)", marginBottom: 0 }}>{feature.text}</p>
@@ -180,7 +180,7 @@ export default function TablePage() {
       <section>
         <Reveal className="wrap grid items-center gap-10 md:grid-cols-2">
           <ProductPreview kind="grocery" />
-          <div>
+          <div className="table-story-copy">
             <p className="eyebrow">Spend less time figuring it out</p>
             <h2>Make the plan happen with what you actually need.</h2>
             <p>
@@ -194,13 +194,13 @@ export default function TablePage() {
 
 
 
-      <section>
+      <section className="table-faq">
         <Reveal className="wrap">
           <div className="section-head">
             <p className="eyebrow">A few quick answers</p>
             <h2>Questions about The Table</h2>
           </div>
-          <div style={{ maxWidth: "48rem", margin: "0 auto" }}>
+          <div className="table-faq-list" style={{ maxWidth: "48rem", margin: "0 auto" }}>
             <details style={{ padding: "1rem 0", borderBottom: "1px solid var(--line)" }}>
               <summary>Does The Table count calories or track nutrition?</summary>
               <p style={{ color: "var(--muted)" }}>No. It focuses on meal planning and helping you remember what needs to be bought.</p>
@@ -226,7 +226,7 @@ export default function TablePage() {
               Applicable taxes are calculated at checkout.
             </p>
           </div>
-          <div style={{ maxWidth: "34rem", margin: "0 auto", padding: "2rem", textAlign: "center", border: "1px solid var(--line)", borderRadius: "18px", background: "var(--cream)" }}>
+          <div className="table-purchase-card" style={{ maxWidth: "34rem", margin: "0 auto", padding: "2rem", textAlign: "center", border: "1px solid var(--line)", borderRadius: "18px", background: "var(--cream)" }}>
             <p className="eyebrow">The Table · web app</p>
             <p style={{ fontSize: "clamp(2rem, 6vw, 3rem)", margin: "0.5rem 0" }}>$12</p>
             <p style={{ color: "var(--muted)" }}>one-time purchase · no recurring fee</p>
@@ -237,6 +237,6 @@ export default function TablePage() {
           </div>
         </Reveal>
       </section>
-    </>
+    </main>
   );
 }
