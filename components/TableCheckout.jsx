@@ -22,6 +22,7 @@ export default function TableCheckout({ enabled = false }) {
           // Only a verified server webhook may grant app access.
           setCompleted(true);
           setError("");
+          window.location.assign("/table/app/account");
         }
         if (event.name === "checkout.error") {
           setError("Checkout could not be completed. Please try again or contact us.");
@@ -44,10 +45,33 @@ export default function TableCheckout({ enabled = false }) {
     }
   }
 
-  function openCheckout() {
+  async function openCheckout() {
     setError("");
     try {
+      const stored = JSON.parse(localStorage.getItem("sb-pwhmbfnjzlljwcwtdsyp-auth-token") || "null");
+      const session = stored?.expiresAt > Date.now() ? JSON.parse(stored.value) : null;
+      if (!session?.access_token) {
+        window.location.assign("/table/app/login");
+        return;
+      }
+      const response = await fetch("https://pwhmbfnjzlljwcwtdsyp.supabase.co/auth/v1/user", {
+        headers: {
+          apikey: "sb_publishable_vfe4ALJ5WZ--XKWK386UVg_0uENYVQh",
+          Authorization: "Bearer " + session.access_token,
+        },
+      });
+      if (!response.ok) {
+        window.location.assign("/table/app/login");
+        return;
+      }
+      const user = await response.json();
+      if (!user.email_confirmed_at) {
+        setError("Confirm your account email before purchasing.");
+        return;
+      }
       window.Paddle.Checkout.open({
+        customer: { email: user.email },
+        customData: { table_user_id: user.id },
         items: [{ priceId: PRICE_ID, quantity: 1 }],
         settings: { displayMode: "overlay", theme: "light" },
       });
@@ -63,7 +87,7 @@ export default function TableCheckout({ enabled = false }) {
           Available soon
         </button>
         <p style={{ color: "var(--muted)", fontSize: "0.85rem" }}>
-          Purchases open soon. <Link href="/studio/contact">Ask about The Table</Link>
+          Purchases open soon. <Link href="/table/app/login">Create an account or sign in</Link>
         </p>
       </div>
     );
@@ -91,6 +115,7 @@ export default function TableCheckout({ enabled = false }) {
       <p style={{ color: "var(--muted)", fontSize: "0.85rem" }}>
         One-time payment through Paddle. Applicable taxes are shown before you pay.
       </p>
+      <p style={{ fontSize: "0.85rem" }}><Link href="/table/app/account">Already purchased? Open your account</Link></p>
       {error && <p role="alert">{error} <Link href="/studio/contact">Contact support</Link></p>}
     </div>
   );
