@@ -24,7 +24,7 @@ export default function Shop() {
             <span className="sm:whitespace-nowrap">Meal planning, grocery lists, and more in The Table.</span>
           </p>
           </div>
-          <EditorialIllustration scene="studio" className="studio-hero-art" label="An overhead studio worktable with a laptop, planning cards, and a cup." priority />
+          <EditorialIllustration scene="studio" className="studio-hero-art" label="A woman with curly hair and round glasses arranging planning cards at her studio table." priority />
         </div>
       </header>
 

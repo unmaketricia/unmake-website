@@ -2,7 +2,6 @@ import Image from "next/image";
 import "@/app/illustrations.css";
 
 const scenes = {
-  studio: [0, 0],
   table: [1, 0],
   budget: [2, 0],
   weekly: [0, 1],
@@ -10,7 +9,6 @@ const scenes = {
   inventory: [2, 1],
   favorites: [0, 2],
   custom: [1, 2],
-  sharing: [2, 2],
 };
 
 export default function EditorialIllustration({
@@ -19,11 +17,14 @@ export default function EditorialIllustration({
   label,
   priority = false,
 }) {
-  // Object-based compositions replace the former character illustrations.
-  const isOriginalPair = scene === "studio" || scene === "sharing";
-  const [column, row] = isOriginalPair
-    ? [scene === "studio" ? 0 : 1, 0]
-    : scenes[scene] || scenes.table;
+  const isHero = scene === "studio";
+  const isSharing = scene === "sharing";
+  const [column, row] = isHero ? [0, 0] : isSharing ? [1, 0] : scenes[scene] || scenes.table;
+  const src = isHero
+    ? "/images/unmake-studio-planner.png"
+    : isSharing
+      ? "/images/unmake-worktable-sharing.png"
+      : "/images/studio-editorial-atlas.png";
   return (
     <span
       className={`editorial-illustration ${className}`}
@@ -33,12 +34,12 @@ export default function EditorialIllustration({
       aria-hidden={label ? undefined : true}
     >
       <Image
-        src={isOriginalPair ? "/images/unmake-worktable-sharing.png" : "/images/studio-editorial-atlas.png"}
-        style={isOriginalPair ? { width: "200%", height: "100%" } : undefined}
+        src={src}
+        style={isHero ? { width: "100%", height: "100%", objectFit: "contain" } : isSharing ? { width: "200%", height: "100%" } : undefined}
         alt=""
-        width={isOriginalPair ? 1774 : 1254}
-        height={isOriginalPair ? 887 : 1254}
-        sizes="1254px"
+        width={isHero ? 1254 : isSharing ? 1774 : 1254}
+        height={isHero ? 1254 : isSharing ? 887 : 1254}
+        sizes={isHero ? "(max-width: 860px) 260px, 420px" : "1254px"}
         quality={85}
         priority={priority}
       />
