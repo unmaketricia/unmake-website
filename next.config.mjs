@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
     return [
+      { source: "/table/app", destination: "https://the-table-commercial.vercel.app/table/app" },
       { source: "/table/app/:path*", destination: "https://the-table-commercial.vercel.app/table/app/:path*" },
     ];
   },
