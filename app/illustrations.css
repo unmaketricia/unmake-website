@@ -59,3 +59,13 @@
 @media (max-width: 520px) {
   .table-feature-illustration { width: 88px; margin-bottom: 16px; }
 }
+
+/* Keep the Studio introduction and featured product visually connected. */
+.studio-hero.hero.tight { padding-bottom: var(--s3); }
+.studio-hero + #the-table { padding-top: var(--s4); }
+.studio-product-heading { max-width: 100%; }
+.studio-volume { white-space: nowrap; }
+@media (max-width: 860px) {
+  .studio-hero.hero.tight { padding-bottom: var(--s2); }
+  .studio-hero + #the-table { padding-top: var(--s3); }
+}

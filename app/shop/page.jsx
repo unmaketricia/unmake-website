@@ -13,7 +13,7 @@ export const metadata = {
 export default function Shop() {
   return (
     <>
-      <header className="hero tight">
+      <header className="hero tight studio-hero">
         <div className="wrap studio-hero-grid">
           <div>
           <p className="eyebrow">UNMAKE Studio</p>
@@ -47,9 +47,9 @@ export default function Shop() {
 
       <section className="cream" id="available">
         <Reveal className="wrap">
-          <div className="section-head">
+          <div className="section-head studio-product-heading">
             <p className="eyebrow">Available now</p>
-            <h2>No Toy Needed, Vol. 1</h2>
+            <h2>No Toy Needed, <span className="studio-volume">Vol. 1</span></h2>
           </div>
           <div className="product">
             {/* eslint-disable-next-line @next/next/no-img-element */}
