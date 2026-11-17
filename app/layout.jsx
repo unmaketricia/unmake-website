@@ -1,20 +1,14 @@
-import { Poppins, Lora } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-lora",
+const kalam = localFont({
+  src: [
+    { path: "../public/fonts/Kalam-Regular.woff", weight: "400", style: "normal" },
+    { path: "../public/fonts/Kalam-Bold.woff", weight: "700", style: "normal" },
+  ],
+  variable: "--font-kalam",
   display: "swap",
 });
 
@@ -27,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${lora.variable}`}>
+    <html lang="en" className={kalam.variable}>
       <body>
         <Nav />
         {children}
