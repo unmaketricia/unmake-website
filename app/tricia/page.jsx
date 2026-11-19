@@ -40,7 +40,7 @@ export default function Portfolio() {
               </article>
             ))}
             <article className="card">
-              <h3>Paid marketing &amp; SEO, when you need them.</h3>
+              <h3>Paid marketing &amp; SEO,<br />when you need them.</h3>
               <p>{packageNote}</p>
             </article>
           </div>
@@ -187,8 +187,8 @@ export default function Portfolio() {
         <Reveal className="wrap">
           <div className="section-head"><h2><span className={styles.titleHighlight}>Experience</span></h2></div>
           <div className={styles.experienceGrid}>
-            <div><ul className="facts">{experience.map(item => <li key={item.role}><span className="yr">{item.period}</span><span><strong>{item.role}</strong><br />{item.organisation}</span></li>)}</ul><p className={styles.education}>BS in Entrepreneurship · Southville International School &amp; Colleges</p><Link className="textlink" href="/tricia/cv">Read my full CV</Link></div>
-            <div className={styles.toolset}><h3><span className={styles.titleHighlight}>Tools I work with</span></h3><ul className="tag-list">{tools.map(tool => <li key={tool}>{tool}</li>)}</ul><p className={styles.approach}>I choose tools around the task, then make sure the result is usable, documented, and easy to maintain.</p></div>
+            <div><ul className="facts">{experience.map(item => <li key={item.role}><span className="yr">{item.period}</span><span><strong>{item.role}</strong><br />{item.organisation}</span></li>)}</ul><p className={styles.education}>BS in Entrepreneurship<br />Southville International School &amp; Colleges</p><Link className="textlink" href="/tricia/cv">Read my full CV</Link></div>
+            <div className={styles.toolset}><h3><span className={styles.titleHighlight}>Tools I work with</span></h3><ul className="tag-list">{tools.map(tool => <li key={tool}>{tool}</li>)}</ul></div>
           </div>
         </Reveal>
       </section>

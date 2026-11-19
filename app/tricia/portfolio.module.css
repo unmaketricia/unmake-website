@@ -4,6 +4,7 @@
   --project-space: clamp(24px, 3.2vw, 44px);
   overflow-wrap: break-word;
 }
+.portfolio p { text-align: justify; }
 .portfolio :is(h1, h2, h3, h4),
 .portfolio :global(.case-top h3) { color: var(--ink); }
 .portfolio :global(.cta-band h2) { color: var(--cream); }
@@ -58,6 +59,8 @@
   gap: 20px;
 }
 .icsh :global(.case-top) { align-items: baseline; }
+.icsh :global(.case-top) h3,
+.tableCase h3 { color: var(--teal-deep); }
 .caseIntro { color: var(--muted); }
 .deliverables > div {
   background: var(--cream);
@@ -94,7 +97,6 @@
 .experienceGrid :global(.yr) { font-size:1rem; }
 .education { color:var(--muted); margin:24px 0; }
 .toolset h3 { font-size:1.5rem; margin-bottom:16px; }
-.approach { margin-top:24px; color:var(--muted); }
 .contactActions { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
 .portfolio a:focus-visible { outline: 3px solid var(--fig); outline-offset:5px; border-radius:4px; }
 @media (max-width:860px) {
