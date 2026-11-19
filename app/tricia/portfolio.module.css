@@ -20,6 +20,13 @@
   max-width: none;
   font-size: clamp(1.5rem, 9.5cqi, 3.6rem);
 }
+.titleHighlight {
+  padding-inline: 0.08em;
+  margin-inline: -0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: linear-gradient(90deg, #eedfb5, #edd9a1 60%, #eedfb5) center / 100% 0.76em no-repeat;
+}
 .portfolio :global(.hero .lede) {
   max-width: 43ch;
   margin-block: clamp(20px, 3vw, 32px);
