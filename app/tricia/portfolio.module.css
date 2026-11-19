@@ -43,9 +43,9 @@
 .services { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
 .primaryService { grid-column: 1/-1; }
 .primaryService p { max-width: 76ch; }
-.package { margin-top: 28px; padding: 20px 0 0; border-top: 1px solid var(--line); }
+.package { margin-top: 28px; padding: 20px 0 0; border-top: 1px solid var(--line); text-align: center; }
 .package h3 { font-size: 1.45rem; margin-bottom: 12px; }
-.package p { color: var(--muted); max-width: 76ch; }
+.package p { color: var(--muted); max-width: 76ch; margin-inline: auto; }
 .icsh :global(.case-top) { gap: 48px; }
 .caseIntro { color: var(--muted); }
 .deliverables { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
