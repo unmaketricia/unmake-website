@@ -70,7 +70,7 @@ export default function Portfolio() {
           </article>
           <section className={styles.organicWork} aria-labelledby="organic-social-media-manager">
             <h3 id="organic-social-media-manager">
-              <span className={styles.titleHighlight}><span className={styles.organicTitlePhrase}>Organic Social Media</span>{" "}Management</span>
+              <span className={styles.titleHighlight}>Social Media Management</span>
             </h3>
             <div className="case">
               <div className="case-top">

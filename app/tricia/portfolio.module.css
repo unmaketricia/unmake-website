@@ -80,10 +80,6 @@
   font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   margin-bottom: var(--s2);
 }
-.organicTitlePhrase {
-  display: inline-block;
-  max-inline-size: 100%;
-}
 .organicWork :global(.case-top) h4 {
   font-family: var(--font-kalam), cursive;
   font-size: 1.6rem;
@@ -114,4 +110,5 @@
   .portfolio :global(.wrap) { padding-inline:22px; }
   .portfolio :global(.card) { padding:26px; }
   .portfolio :global(.metrics) { gap:24px; }
+  .organicWork > h3 { font-size: clamp(1.5rem, 7.5vw, 1.8rem); }
 }
