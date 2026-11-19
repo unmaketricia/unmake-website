@@ -1,6 +1,14 @@
 
 .portfolio { overflow-wrap: break-word; }
-.portfolio h1 { max-width: 17ch; }
+.portfolio :global(.about-hero) {
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+}
+.heroCopy { container-type: inline-size; }
+.portfolio .heroTitle {
+  max-width: none;
+  font-size: clamp(1.5rem, 9.5cqi, 3.6rem);
+}
 .portfolio :global(.lede) { max-width: 43ch; }
 .portfolio :global(.section-head) { max-width: 60ch; }
 .portfolio :global(.section-head h2) { max-width: 25ch; }
@@ -19,14 +27,17 @@
 .package p { color: var(--muted); max-width: 76ch; }
 .icsh { margin-bottom: 32px; }
 .icsh :global(.case-top) { gap: 48px; }
-.icsh :global(.eyebrow) { font-size: .8rem; letter-spacing: .12em; }
 .caseIntro { color: var(--muted); }
-.deliverables { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px 48px; }
-.deliverables > div { border-top: 1px solid var(--line); padding-top: 20px; }
+.deliverables { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.deliverables > div {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: clamp(20px, 3vw, 32px);
+}
 .deliverables h4 { color: var(--teal-deep); font-size: 1.05rem; font-weight: 600; margin-bottom: 10px; }
 .deliverables p { color: var(--muted); }
-.caseFooter { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 32px; font-size: .95rem; }
-.caseFooter span { color: var(--muted); }
+.caseFooter { margin-top: 24px; font-size: .95rem; }
 .tableCase { display:flex; justify-content:space-between; align-items:center; gap:32px; }
 .tableCase h3 { color:var(--teal); font-size:1.6rem; margin-bottom:12px; }
 .tableCase p { max-width:66ch; color:var(--muted); }
@@ -41,7 +52,7 @@
 .contactActions { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
 .portfolio a:focus-visible { outline: 3px solid var(--fig); outline-offset:5px; border-radius:4px; }
 @media (max-width:860px) {
-  .services,.deliverables,.experienceGrid { grid-template-columns:1fr; }
+  .portfolio :global(.about-hero), .services, .deliverables, .experienceGrid { grid-template-columns:1fr; }
   .experienceGrid { gap:40px; }
   .primaryService { grid-column:auto; }
   .icsh :global(.case-top) { gap:24px; }

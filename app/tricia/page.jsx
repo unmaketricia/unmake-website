@@ -15,9 +15,11 @@ export default function Portfolio() {
     <main className={styles.portfolio}>
       <header className="hero">
         <div className="wrap about-hero">
-          <div>
+          <div className={styles.heroCopy}>
             <p className="eyebrow">Tricia Hilario · Independent digital marketer</p>
-            <h1>Thoughtful marketing. Practical digital systems.</h1>
+            <h1 className={styles.heroTitle}>
+              Thoughtful marketing.<br /> Practical digital systems.
+            </h1>
             <p className="lede">I help brands connect with their audience and make everyday work easier through AI automation, website creation, and organic marketing.</p>
             <div className="hero-actions">
               <a className="btn" href="#work">Explore my work</a>
@@ -39,7 +41,7 @@ export default function Portfolio() {
 
       <section className="cream" id="services">
         <Reveal className="wrap">
-          <div className="section-head"><p className="eyebrow">What I do</p><h2>From the way you show up to the way you work.</h2></div>
+          <div className="section-head"><h2>From the way you show up to the way you work.</h2></div>
           <div className={styles.services}>
             {services.map(({ title, body }, index) => <article className={"card " + (index === 0 ? styles.primaryService : "")} key={title}><h3>{title}</h3><p>{body}</p></article>)}
           </div>
@@ -49,14 +51,21 @@ export default function Portfolio() {
 
       <section id="work">
         <Reveal className="wrap">
-          <div className="section-head"><p className="eyebrow">Selected work</p><h2>Websites, workflows, and brands I’ve worked on.</h2></div>
+          <div className="section-head"><h2>Websites, workflows, and brands I’ve worked on.</h2></div>
           <article className={"case " + styles.icsh}>
             <div className="case-top">
-              <div><p className="eyebrow">Featured project · UK community organisation</p><h3>Islamic &amp; Cultural Society of Harrow</h3><p className="desc">ICSH · Website &amp; systems modernisation</p><div className="case-tags"><span>Website creation</span><span>AI-assisted workflows</span><span>Bespoke workspaces</span><span>CRM &amp; forms</span></div></div>
+              <div><h3>Islamic &amp; Cultural Society of Harrow</h3><p className="desc">Website &amp; systems modernisation</p></div>
               <p className={styles.caseIntro}>I helped modernise ICSH’s digital setup across its website, workspaces, forms, and membership processes. My role connected the public-facing website with the practical systems the team needs behind it.</p>
             </div>
             <div className={styles.deliverables}>{icshWork.map(({ title, body }) => <div key={title}><h4>{title}</h4><p>{body}</p></div>)}</div>
-            <div className={styles.caseFooter}><span>ChatGPT · GitHub · Vercel · Supabase · Zoho</span><Link className="textlink" href="/tricia/work/icsh">Read the case study</Link></div>
+            <div className={styles.caseFooter}><Link className="textlink" href="/tricia/work/icsh">Read the case study</Link></div>
+          </article>
+          <article className={"case " + styles.tableCase}>
+            <div>
+              <h3>The Table</h3>
+              <p>A meal-planning and grocery-list web app I created from an everyday need. The project brings together website creation, a digital product, checkout, and private household access.</p>
+            </div>
+            <Link className="btn ghost" href="/tricia/work/the-table">Read the case study</Link>
           </article>
           <div className="case">
             <div className="case-top">
@@ -83,7 +92,6 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-            <p className="sample-label">Selected work</p>
             <div className="samples">
               <figure>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -138,7 +146,6 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-            <p className="sample-label">Selected work</p>
             <div className="samples">
               <figure>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -167,15 +174,12 @@ export default function Portfolio() {
               />
             </div>
           </div>
-
-
-          <article className={"case " + styles.tableCase}><div><h3>The Table</h3><p>A meal-planning and grocery-list web app I created from an everyday need. The project brings together website creation, a digital product, checkout, and private household access.</p></div><Link className="btn ghost" href="/tricia/work/the-table">Read the case study</Link></article>
         </Reveal>
       </section>
 
       <section className="cream" id="experience">
         <Reveal className="wrap">
-          <div className="section-head"><p className="eyebrow">Experience &amp; approach</p><h2>Strategy and delivery, with one point of contact.</h2><p>I’m Tricia, an independent digital marketer based in the Philippines. I work directly with clients on the content, websites, and systems that support their business.</p></div>
+          <div className="section-head"><h2>Experience</h2></div>
           <div className={styles.experienceGrid}>
             <div><ul className="facts">{experience.map(item => <li key={item.role}><span className="yr">{item.period}</span><span><strong>{item.role}</strong><br />{item.organisation}</span></li>)}</ul><p className={styles.education}>BS in Entrepreneurship · Southville International School &amp; Colleges</p><Link className="textlink" href="/tricia/cv">Read my full CV</Link></div>
             <div className={styles.toolset}><h3>Tools I work with</h3><ul className="tag-list">{tools.map(tool => <li key={tool}>{tool}</li>)}</ul><p className={styles.approach}>I choose tools around the task, then make sure the result is usable, documented, and easy to maintain.</p></div>
