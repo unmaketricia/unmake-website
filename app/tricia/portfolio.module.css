@@ -21,8 +21,8 @@
   font-size: clamp(1.5rem, 9.5cqi, 3.6rem);
 }
 .titleHighlight {
-  --highlight-edge: color-mix(in srgb, var(--teal-deep) 28%, white);
-  --highlight-center: color-mix(in srgb, var(--teal-deep) 36%, white);
+  --highlight-edge: color-mix(in srgb, var(--teal-deep) 21%, white);
+  --highlight-center: color-mix(in srgb, var(--teal-deep) 28%, white);
   padding-inline: 0.08em;
   margin-inline: -0.08em;
   -webkit-box-decoration-break: clone;
@@ -79,7 +79,10 @@
 .organicWork > h3 {
   font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   margin-bottom: var(--s2);
-  text-wrap: balance;
+}
+.organicTitlePhrase {
+  display: inline-block;
+  max-inline-size: 100%;
 }
 .organicWork :global(.case-top) h4 {
   font-family: var(--font-kalam), cursive;

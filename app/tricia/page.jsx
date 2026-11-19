@@ -17,7 +17,8 @@ export default function Portfolio() {
         <div className="wrap about-hero">
           <div className={styles.heroCopy}>
             <h1 className={styles.heroTitle}>
-              Thoughtful marketing.<br /> <span className={styles.titleHighlight}>Practical digital systems.</span>
+              <span className={styles.titleHighlight}>Thoughtful marketing.</span><br />
+              <span className={styles.titleHighlight}>Practical digital systems.</span>
             </h1>
             <p className="lede">I help brands connect with their audience and make everyday work easier through AI automation, website creation, and organic marketing.</p>
             <div className="hero-actions">
@@ -68,7 +69,9 @@ export default function Portfolio() {
             <Link className="btn" href="/tricia/work/the-table">Read the case study</Link>
           </article>
           <section className={styles.organicWork} aria-labelledby="organic-social-media-manager">
-            <h3 id="organic-social-media-manager"><span className={styles.titleHighlight}>Organic Social Media Management</span></h3>
+            <h3 id="organic-social-media-manager">
+              <span className={styles.titleHighlight}><span className={styles.organicTitlePhrase}>Organic Social Media</span>{" "}Management</span>
+            </h3>
             <div className="case">
               <div className="case-top">
                 <div>
