@@ -30,15 +30,6 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <nav className={styles.sectionNav} aria-label="Portfolio sections">
-        <ul className={"wrap " + styles.sectionLinks}>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Selected work</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Work with me</a></li>
-        </ul>
-      </nav>
-
       <section className="cream" id="services" aria-label="Services">
         <Reveal className="wrap">
           <div className={styles.services}>
