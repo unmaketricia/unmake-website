@@ -17,7 +17,7 @@ export default function Portfolio() {
         <div className="wrap about-hero">
           <div className={styles.heroCopy}>
             <h1 className={styles.heroTitle}>
-              Thoughtful marketing.<br /> Practical digital systems.
+              Thoughtful marketing.<br /> <span className={styles.heroUnderline}>Practical digital systems.</span>
             </h1>
             <p className="lede">I help brands connect with their audience and make everyday work easier through AI automation, website creation, and organic marketing.</p>
             <div className="hero-actions">

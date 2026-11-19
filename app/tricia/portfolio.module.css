@@ -19,6 +19,12 @@
   max-width: none;
   font-size: clamp(1.5rem, 9.5cqi, 3.6rem);
 }
+.heroUnderline {
+  text-decoration-line: underline;
+  text-decoration-color: var(--teal-deep);
+  text-decoration-thickness: 0.065em;
+  text-underline-offset: 0.15em;
+}
 .portfolio :global(.hero .lede) {
   max-width: 43ch;
   margin-block: clamp(20px, 3vw, 32px);
@@ -83,7 +89,13 @@
 .experienceGrid :global(.facts li) { grid-template-columns:1fr; gap:8px; }
 .experienceGrid :global(.yr) { font-size:1rem; }
 .education { color:var(--muted); margin:24px 0; }
-.toolset h3 { font-size:1.5rem; margin-bottom:16px; }
+.toolset h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
 .approach { margin-top:24px; color:var(--muted); }
 .contactActions { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
 .portfolio a:focus-visible { outline: 3px solid var(--fig); outline-offset:5px; border-radius:4px; }
