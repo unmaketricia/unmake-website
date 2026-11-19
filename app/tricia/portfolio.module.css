@@ -14,6 +14,7 @@
   grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
   gap: clamp(32px, 5vw, 72px);
 }
+.portfolio :global(.portrait img) { filter: grayscale(1); }
 .heroCopy { container-type: inline-size; }
 .portfolio .heroTitle {
   max-width: none;
@@ -102,6 +103,7 @@
 @media (max-width:860px) {
   .portfolio :global(.about-hero), .icsh :global(.case-top),
   .deliverables, .experienceGrid { grid-template-columns:1fr; }
+  .portfolio :global(.portrait) { max-width: none; }
   .experienceGrid { gap:40px; }
   .tableCase { align-items:flex-start; flex-direction:column; }
 }
