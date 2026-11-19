@@ -17,7 +17,7 @@ export default function Portfolio() {
         <div className="wrap about-hero">
           <div className={styles.heroCopy}>
             <h1 className={styles.heroTitle}>
-              Thoughtful marketing.<br /> Practical digital systems.
+              Thoughtful marketing.<br /> <span className={styles.titleHighlight}>Practical digital systems.</span>
             </h1>
             <p className="lede">I help brands connect with their audience and make everyday work easier through AI automation, website creation, and organic marketing.</p>
             <div className="hero-actions">
@@ -48,7 +48,7 @@ export default function Portfolio() {
 
       <section id="work">
         <Reveal className="wrap">
-          <div className="section-head"><h2>Websites, workflows, and brands I’ve worked on.</h2></div>
+          <div className="section-head"><h2><span className={styles.titleHighlight}>Websites, workflows, and brands I’ve worked on.</span></h2></div>
           <article className={"case " + styles.icsh}>
             <div className="case-top">
               <div>
@@ -68,7 +68,7 @@ export default function Portfolio() {
             <Link className="btn" href="/tricia/work/the-table">Read the case study</Link>
           </article>
           <section className={styles.organicWork} aria-labelledby="organic-social-media-manager">
-            <h3 id="organic-social-media-manager">Organic Social Media Management</h3>
+            <h3 id="organic-social-media-manager"><span className={styles.titleHighlight}>Organic Social Media Management</span></h3>
             <div className="case">
               <div className="case-top">
                 <div>
@@ -182,10 +182,10 @@ export default function Portfolio() {
 
       <section className="cream" id="experience">
         <Reveal className="wrap">
-          <div className="section-head"><h2>Experience</h2></div>
+          <div className="section-head"><h2><span className={styles.titleHighlight}>Experience</span></h2></div>
           <div className={styles.experienceGrid}>
             <div><ul className="facts">{experience.map(item => <li key={item.role}><span className="yr">{item.period}</span><span><strong>{item.role}</strong><br />{item.organisation}</span></li>)}</ul><p className={styles.education}>BS in Entrepreneurship · Southville International School &amp; Colleges</p><Link className="textlink" href="/tricia/cv">Read my full CV</Link></div>
-            <div className={styles.toolset}><h3>Tools I work with</h3><ul className="tag-list">{tools.map(tool => <li key={tool}>{tool}</li>)}</ul><p className={styles.approach}>I choose tools around the task, then make sure the result is usable, documented, and easy to maintain.</p></div>
+            <div className={styles.toolset}><h3><span className={styles.titleHighlight}>Tools I work with</span></h3><ul className="tag-list">{tools.map(tool => <li key={tool}>{tool}</li>)}</ul><p className={styles.approach}>I choose tools around the task, then make sure the result is usable, documented, and easy to maintain.</p></div>
           </div>
         </Reveal>
       </section>

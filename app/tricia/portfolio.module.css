@@ -20,6 +20,15 @@
   max-width: none;
   font-size: clamp(1.5rem, 9.5cqi, 3.6rem);
 }
+.titleHighlight {
+  --highlight-edge: color-mix(in srgb, var(--teal-deep) 28%, white);
+  --highlight-center: color-mix(in srgb, var(--teal-deep) 36%, white);
+  padding-inline: 0.08em;
+  margin-inline: -0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: linear-gradient(90deg, var(--highlight-edge), var(--highlight-center) 60%, var(--highlight-edge)) center / 100% 0.76em no-repeat;
+}
 .portfolio :global(.hero .lede) {
   max-width: 43ch;
   margin-block: clamp(20px, 3vw, 32px);
