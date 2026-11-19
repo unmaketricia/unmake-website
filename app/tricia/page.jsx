@@ -53,7 +53,7 @@ export default function Portfolio() {
           <article className={"case " + styles.icsh}>
             <div className="case-top">
               <div>
-                <h3>Islamic &amp; Cultural Society of Harrow</h3>
+                <h3>Islamic &amp; Cultural<br />Society of Harrow</h3>
                 <p className="desc">Website &amp; systems modernisation</p>
                 <Link className={"btn " + styles.caseLink} href="/tricia/work/icsh">Read the case study</Link>
               </div>

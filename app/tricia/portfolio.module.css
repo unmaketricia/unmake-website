@@ -81,6 +81,7 @@
   margin-bottom: var(--s2);
 }
 .organicWork :global(.case-top) h4 {
+  color: var(--teal-deep);
   font-family: var(--font-kalam), cursive;
   font-size: 1.6rem;
   line-height: 1.1;
