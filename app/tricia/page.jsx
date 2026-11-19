@@ -1,242 +1,63 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Carousel from "@/components/Carousel";
-import CtaBand from "@/components/CtaBand";
+import { profile, services, icshWork, experience, packageNote, tools } from "@/lib/portfolio";
+import styles from "./portfolio.module.css";
 
 export const metadata = {
-  title: "Tricia Hilario | Digital Marketer & Social Media Strategist",
-  description:
-    "Independent digital marketer and social media strategist with 7+ years of experience helping brands across the US, UK, Australia, Singapore, and South Africa grow engaged audiences organically.",
+  title: "Tricia Hilario | AI Automation, Websites & Organic Marketing",
+  description: profile.summary,
   robots: { index: false, follow: false },
 };
 
-const services = [
-  ["01", "Social media management", "Strategy, content, scheduling, and community across Instagram, Facebook, and TikTok.", "From USD 1,200 / month"],
-  ["02", "Email marketing", "Sequences and campaigns in Mailchimp or Klaviyo that sound like a person worth hearing from.", "From USD 600 / month"],
-  ["03", "Influencer & UGC", "Strategy, outreach, and collaboration management. Relationship work stays human.", "From USD 600 / month"],
-  ["04", "Amazon graphic design", "Storefronts, A+ Content, and Brand Story visuals that turn browsers into buyers.", "From USD 1,200 / project"],
-  ["05", "Website design", "Clean, mobile-responsive sites built for conversion and easy to maintain.", "From USD 1,200 / project"],
-  ["06", "SEO optimization", "Keyword research, on-page work, and content strategy so the right people find you.", "From USD 1,500 / project"],
-];
-
-const clients = [
-  ["Earthside Birth Pools", "Thoughtfully designed birth pools · US"],
-  ["Bouncee Co", "Stylish bounce houses & toys · US"],
-  ["Iren Shizen", "Japanese skincare brand · Singapore"],
-  ["RSA Property Investment", "Real estate investing · UK"],
-  ["DC Dogsitter", "Boutique concierge pet care · Washington, D.C."],
-  ["Urban Tribe Properties", "Real estate · UK"],
-  ["OutsourcingMe", "VA outsourcing company · UK"],
-  ["DMR Designs AU", "Luxury home design studio · Australia"],
-  ["SomethingMe Books", "Children's book publishing · South Africa"],
-];
-
-const corporate = [
-  ["HSBC", "Global Banking & Markets Associate"],
-  ["Deutsche Bank", "Trading Risk & P&L Bookrunner"],
-  ["ANZ Bank", "Global Markets Surveillance Analyst"],
-  ["ING", "Anti-Money Laundering Officer"],
-];
-
-const skills = [
-  "Social Media Strategy & Content Planning",
-  "Brand Voice & Messaging",
-  "Organic Growth & Community Building",
-  "Content Creation & Storytelling",
-  "Reels & Short-Form Video Strategy",
-  "Analytics & Performance Reporting",
-  "Influencer & UGC Strategy",
-  "Copywriting & Caption Writing",
-  "Email Marketing Campaigns",
-  "Amazon Storefront & A+ Content Design",
-];
-
-const tools = [
-  "Meta Business Suite",
-  "Instagram · Facebook · TikTok · Pinterest",
-  "Canva",
-  "Notion",
-  "Later · Hootsuite · Buffer",
-  "CapCut · InShot",
-  "Google Analytics · Workspace",
-  "Metricool · Sprout Social",
-  "Shopify · WooCommerce",
-  "Klaviyo · Mailchimp",
-];
-
-export default function Home() {
+export default function Portfolio() {
   return (
-    <>
-      {/* Hero */}
+    <main className={styles.portfolio}>
       <header className="hero">
         <div className="wrap about-hero">
           <div>
-            <p className="eyebrow">Digital Marketer &amp; Social Media Strategist</p>
-            <h1>Hello, I&apos;m Tricia.</h1>
-            <p className="lede">
-              A retired banking and finance officer turned digital marketer,
-              helping brands grow engaged audiences organically — authentically,
-              and on their own terms.
-            </p>
+            <p className="eyebrow">Tricia Hilario · Independent digital marketer</p>
+            <h1>Thoughtful marketing. Practical digital systems.</h1>
+            <p className="lede">I help brands connect with their audience and make everyday work easier through AI automation, website creation, and organic marketing.</p>
             <div className="hero-actions">
-              <a className="btn" href="#work">
-                View my work
-              </a>
-              <a
-                className="btn ghost"
-                href="https://calendly.com/tricia-un-make/30min"
-                target="_blank"
-                rel="noopener"
-              >
-                Book a call
-              </a>
+              <a className="btn" href="#work">Explore my work</a>
+              <Link className="btn ghost" href="/tricia/cv">View my CV</Link>
             </div>
             <div className="hero-meta">
-              <span>
-                <b>7+ years</b> in digital marketing
-              </span>
-              <span>
-                <b>Clients</b> in the US, UK, AU, SG &amp; ZA
-              </span>
-              <span>
-                <b>Independent</b> — you work with me directly
-              </span>
+              <span><b>7+ years</b> in digital marketing</span>
+              <span><b>Philippines-based</b> · working internationally</span>
+              <span><b>Direct collaboration</b> from strategy to delivery</span>
             </div>
           </div>
-          <div className="portrait">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/tricia.jpg" alt="Tricia Hilario" />
-          </div>
+          <div className="portrait"><img src="/images/tricia.jpg" alt="Tricia Hilario" width="340" height="425" /></div>
         </div>
       </header>
 
-      {/* About */}
-      <section className="cream" id="about">
-        <Reveal className="wrap">
-          <div className="section-head">
-            <p className="eyebrow">About me</p>
-            <h2>
-              From finance &amp; compliance
-              <br />
-              to systems that breathe
-              <br />
-              and content that connect.
-            </h2>
-          </div>
-          <div className="story">
-            <p className="first">
-              I&apos;m an independent digital marketer and social media
-              strategist based in the Philippines, working with brands
-              worldwide. I hold a BS in Entrepreneurship, so I don&apos;t just
-              market for businesses — I understand what it takes to run one: the
-              late nights, the tight budgets, the pressure to always do more with
-              less.
-            </p>
-            <p>
-              Earlier in my career, I spent seven years in global banking (HSBC,
-              Deutsche Bank, ANZ, ING), then became a social media strategist in
-              2018. Since then, I&apos;ve helped brands across a range of
-              industries in the US, UK, Australia, and Asia grow without losing
-              themselves in the process.
-            </p>
-            <p>
-              Now, in a world where AI can churn out content in seconds, I still
-              believe the best marketing comes from sincere, well thought out
-              solutions, not shortcuts. AI helps me work faster. It doesn&apos;t
-              replace the human touch that makes people trust a brand.
-            </p>
-          </div>
+      <nav className={styles.sectionNav} aria-label="Portfolio sections">
+        <div className="wrap"><a href="#services">Services</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#contact">Work with me</a></div>
+      </nav>
 
-          {/* Independent, not an agency */}
-          <div className="callout compact">
-            <span className="big">not an agency.</span>
-            <div>
-              <h3>You work with me. Directly.</h3>
-              <p>
-                Every strategy and every final call is mine. No account managers,
-                no handoffs, no junior team learning on your brand — just one
-                experienced strategist, start to finish.
-              </p>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* Experience */}
-      <section id="experience">
-        <Reveal className="wrap">
-          <div className="section-head">
-            <p className="eyebrow">Experience</p>
-            <h2>Seven years in finance. Seven more in marketing.</h2>
-          </div>
-          <ul className="facts">
-            <li>
-              <span className="yr">2018–now</span>
-              <span>
-                <b style={{ color: "var(--ink)", fontWeight: 500 }}>
-                  Independent Social Media Strategist &amp; Digital Marketer
-                </b>{" "}
-                — organic strategy, content, and campaigns for e-commerce,
-                lifestyle, and community-focused brands.
-              </span>
-            </li>
-            {corporate.map(([org, role]) => (
-              <li key={org}>
-                <span className="yr">2011–18</span>
-                <span>
-                  <b style={{ color: "var(--ink)", fontWeight: 500 }}>{org}</b> —{" "}
-                  {role}
-                </span>
-              </li>
-            ))}
-            <li>
-              <span className="yr">2011</span>
-              <span>
-                <b style={{ color: "var(--ink)", fontWeight: 500 }}>
-                  BS in Entrepreneurship
-                </b>{" "}
-                — Southville International School &amp; Colleges.
-              </span>
-            </li>
-          </ul>
-        </Reveal>
-      </section>
-
-      {/* What I do */}
       <section className="cream" id="services">
         <Reveal className="wrap">
-          <div className="section-head">
-            <p className="eyebrow">What I do</p>
-            <h2>How I can help your brand grow.</h2>
+          <div className="section-head"><p className="eyebrow">What I do</p><h2>From the way you show up to the way you work.</h2></div>
+          <div className={styles.services}>
+            {services.map(({ title, body }, index) => <article className={"card " + (index === 0 ? styles.primaryService : "")} key={title}><h3>{title}</h3><p>{body}</p></article>)}
           </div>
-          <div className="grid three">
-            {services.map(([num, title, body, price]) => (
-              <div className="card svc" key={num}>
-                <span className="num serif">{num}</span>
-                <h3>{title}</h3>
-                <p>{body}</p>
-                <span className="price">{price}</span>
-              </div>
-            ))}
-          </div>
-          <p style={{ marginTop: "var(--s4)", color: "var(--muted)" }}>
-            Not sure which you need?{" "}
-            <Link className="textlink" href="/contact">
-              Tell me where you&apos;re stuck
-            </Link>{" "}
-            and I&apos;ll recommend the smallest thing that solves it.
-          </p>
+          <aside className={styles.package}><h3>Paid marketing &amp; SEO, when you need them.</h3><p>{packageNote}</p></aside>
         </Reveal>
       </section>
 
-      {/* Selected work */}
       <section id="work">
         <Reveal className="wrap">
-          <div className="section-head">
-            <p className="eyebrow">Selected work</p>
-            <h2>Brands I&apos;ve helped grow.</h2>
-          </div>
-
+          <div className="section-head"><p className="eyebrow">Selected work</p><h2>Websites, workflows, and brands I’ve worked on.</h2></div>
+          <article className={"case " + styles.icsh}>
+            <div className="case-top">
+              <div><p className="eyebrow">Featured project · UK community organisation</p><h3>Islamic &amp; Cultural Society of Harrow</h3><p className="desc">ICSH · Website &amp; systems modernisation</p><div className="case-tags"><span>Website creation</span><span>AI-assisted workflows</span><span>Bespoke workspaces</span><span>CRM &amp; forms</span></div></div>
+              <p className={styles.caseIntro}>I helped modernise ICSH’s digital setup across its website, workspaces, forms, and membership processes. My role connected the public-facing website with the practical systems the team needs behind it.</p>
+            </div>
+            <div className={styles.deliverables}>{icshWork.map(({ title, body }) => <div key={title}><h4>{title}</h4><p>{body}</p></div>)}</div>
+            <div className={styles.caseFooter}><span>ChatGPT · GitHub · Vercel · Supabase · Zoho</span><Link className="textlink" href="/tricia/work/icsh">Read the case study</Link></div>
+          </article>
           <div className="case">
             <div className="case-top">
               <div>
@@ -347,55 +168,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="client-strip">
-            <p className="label">Also trusted by</p>
-            <div className="clients">
-              {clients.map(([name, desc]) => (
-                <span key={name} title={desc}>
-                  {name}
-                </span>
-              ))}
-            </div>
-          </div>
+
+          <article className={"case " + styles.tableCase}><div><h3>The Table</h3><p>A meal-planning and grocery-list web app I created from an everyday need. The project brings together website creation, a digital product, checkout, and private household access.</p></div><Link className="btn ghost" href="/tricia/work/the-table">Read the case study</Link></article>
         </Reveal>
       </section>
 
-      {/* Skills & tools */}
-      <section className="cream" id="skills">
+      <section className="cream" id="experience">
         <Reveal className="wrap">
-          <div className="section-head">
-            <p className="eyebrow">Skills &amp; tools</p>
-            <h2>What I bring, and what I build with.</h2>
-          </div>
-          <div className="grid two">
-            <div className="card">
-              <h3 style={{ marginBottom: "var(--s3)" }}>Core skills</h3>
-              <ul className="tag-list">
-                {skills.map((s) => (
-                  <li key={s}>{s}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="card">
-              <h3 style={{ marginBottom: "var(--s3)" }}>Tools &amp; software</h3>
-              <ul className="tag-list">
-                {tools.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </div>
+          <div className="section-head"><p className="eyebrow">Experience &amp; approach</p><h2>Strategy and delivery, with one point of contact.</h2><p>I’m Tricia, an independent digital marketer based in the Philippines. I work directly with clients on the content, websites, and systems that support their business.</p></div>
+          <div className={styles.experienceGrid}>
+            <div><ul className="facts">{experience.map(item => <li key={item.role}><span className="yr">{item.period}</span><span><strong>{item.role}</strong><br />{item.organisation}</span></li>)}</ul><p className={styles.education}>BS in Entrepreneurship · Southville International School &amp; Colleges</p><Link className="textlink" href="/tricia/cv">Read my full CV</Link></div>
+            <div className={styles.toolset}><h3>Tools I work with</h3><ul className="tag-list">{tools.map(tool => <li key={tool}>{tool}</li>)}</ul><p className={styles.approach}>I choose tools around the task, then make sure the result is usable, documented, and easy to maintain.</p></div>
           </div>
         </Reveal>
       </section>
 
-      {/* Contact */}
-      <CtaBand
-        title="Tell me where you're stuck."
-        text="One message. I'll reply with a plan, clear pricing, and an honest read on fit."
-        href="/contact"
-        cta="Get in touch"
-      />
-    </>
+      <section className="cta-band" id="contact"><div className="wrap"><h2>What would make work easier for you?</h2><p>Tell me what you’re building or where you need support. I’ll recommend a scope and bespoke package around your priorities.</p><div className={styles.contactActions}><a className="btn on-dark" href="mailto:tricia@un-make.com">Email Tricia</a><a className="btn on-dark ghost" href="https://calendly.com/tricia-un-make/30min" target="_blank" rel="noopener noreferrer">Book a call</a></div></div></section>
+    </main>
   );
 }
-
