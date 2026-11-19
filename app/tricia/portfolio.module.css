@@ -41,14 +41,14 @@
 .portfolio :global(.case:last-child) { padding-bottom: 0; }
 .portfolio :global(.case-top) { margin-bottom: clamp(24px, 3vw, 32px); }
 .services { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
-.primaryService { grid-column: 1/-1; }
-.primaryService p { max-width: 76ch; }
-.package { margin-top: 28px; padding: 20px 0 0; border-top: 1px solid var(--line); text-align: center; }
-.package h3 { font-size: 1.45rem; margin-bottom: 12px; }
-.package p { color: var(--muted); max-width: 76ch; margin-inline: auto; }
-.icsh :global(.case-top) { gap: 48px; }
+.icsh :global(.case-top),
+.deliverables {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.icsh :global(.case-top) { align-items: baseline; }
 .caseIntro { color: var(--muted); }
-.deliverables { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
 .deliverables > div {
   background: var(--cream);
   border: 1px solid var(--line);
@@ -88,11 +88,13 @@
 .contactActions { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
 .portfolio a:focus-visible { outline: 3px solid var(--fig); outline-offset:5px; border-radius:4px; }
 @media (max-width:860px) {
-  .portfolio :global(.about-hero), .services, .deliverables, .experienceGrid { grid-template-columns:1fr; }
+  .portfolio :global(.about-hero), .icsh :global(.case-top),
+  .deliverables, .experienceGrid { grid-template-columns:1fr; }
   .experienceGrid { gap:40px; }
-  .primaryService { grid-column:auto; }
-  .icsh :global(.case-top) { gap:24px; }
   .tableCase { align-items:flex-start; flex-direction:column; }
+}
+@media (max-width:640px) {
+  .services { grid-template-columns: 1fr; }
 }
 @media (max-width:480px) {
   .portfolio :global(.wrap) { padding-inline:22px; }

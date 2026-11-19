@@ -16,7 +16,6 @@ export default function Portfolio() {
       <header className="hero">
         <div className="wrap about-hero">
           <div className={styles.heroCopy}>
-            <p className="eyebrow">Tricia Hilario · Independent digital marketer</p>
             <h1 className={styles.heroTitle}>
               Thoughtful marketing.<br /> Practical digital systems.
             </h1>
@@ -33,9 +32,17 @@ export default function Portfolio() {
       <section className="cream" id="services" aria-label="Services">
         <Reveal className="wrap">
           <div className={styles.services}>
-            {services.map(({ title, body }, index) => <article className={"card " + (index === 0 ? styles.primaryService : "")} key={title}><h3>{title}</h3><p>{body}</p></article>)}
+            {services.map(({ title, body }) => (
+              <article className="card" key={title}>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
+            ))}
+            <article className="card">
+              <h3>Paid marketing &amp; SEO, when you need them.</h3>
+              <p>{packageNote}</p>
+            </article>
           </div>
-          <aside className={styles.package}><h3>Paid marketing &amp; SEO, when you need them.</h3><p>{packageNote}</p></aside>
         </Reveal>
       </section>
 
@@ -47,7 +54,7 @@ export default function Portfolio() {
               <div>
                 <h3>Islamic &amp; Cultural Society of Harrow</h3>
                 <p className="desc">Website &amp; systems modernisation</p>
-                <Link className={"btn ghost " + styles.caseLink} href="/tricia/work/icsh">Read the case study</Link>
+                <Link className={"btn " + styles.caseLink} href="/tricia/work/icsh">Read the case study</Link>
               </div>
               <p className={styles.caseIntro}>I helped modernise ICSH’s digital setup across its website, workspaces, forms, and membership processes. My role connected the public-facing website with the practical systems the team needs behind it.</p>
             </div>
@@ -58,10 +65,10 @@ export default function Portfolio() {
               <h3>The Table</h3>
               <p>A meal-planning and grocery-list web app I created from an everyday need. The project brings together website creation, a digital product, checkout, and private household access.</p>
             </div>
-            <Link className="btn ghost" href="/tricia/work/the-table">Read the case study</Link>
+            <Link className="btn" href="/tricia/work/the-table">Read the case study</Link>
           </article>
           <section className={styles.organicWork} aria-labelledby="organic-social-media-manager">
-            <h3 id="organic-social-media-manager">Organic Social Media Manager</h3>
+            <h3 id="organic-social-media-manager">Organic Social Media Management</h3>
             <div className="case">
               <div className="case-top">
                 <div>
