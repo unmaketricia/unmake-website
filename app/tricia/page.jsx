@@ -25,23 +25,22 @@ export default function Portfolio() {
               <a className="btn" href="#work">Explore my work</a>
               <Link className="btn ghost" href="/tricia/cv">View my CV</Link>
             </div>
-            <div className="hero-meta">
-              <span><b>7+ years</b> in digital marketing</span>
-              <span><b>Philippines-based</b> · working internationally</span>
-              <span><b>Direct collaboration</b> from strategy to delivery</span>
-            </div>
           </div>
           <div className="portrait"><img src="/images/tricia.jpg" alt="Tricia Hilario" width="340" height="425" /></div>
         </div>
       </header>
 
       <nav className={styles.sectionNav} aria-label="Portfolio sections">
-        <div className="wrap"><a href="#services">Services</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#contact">Work with me</a></div>
+        <ul className={"wrap " + styles.sectionLinks}>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Selected work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Work with me</a></li>
+        </ul>
       </nav>
 
-      <section className="cream" id="services">
+      <section className="cream" id="services" aria-label="Services">
         <Reveal className="wrap">
-          <div className="section-head"><h2>From the way you show up to the way you work.</h2></div>
           <div className={styles.services}>
             {services.map(({ title, body }, index) => <article className={"card " + (index === 0 ? styles.primaryService : "")} key={title}><h3>{title}</h3><p>{body}</p></article>)}
           </div>
@@ -54,11 +53,14 @@ export default function Portfolio() {
           <div className="section-head"><h2>Websites, workflows, and brands I’ve worked on.</h2></div>
           <article className={"case " + styles.icsh}>
             <div className="case-top">
-              <div><h3>Islamic &amp; Cultural Society of Harrow</h3><p className="desc">Website &amp; systems modernisation</p></div>
+              <div>
+                <h3>Islamic &amp; Cultural Society of Harrow</h3>
+                <p className="desc">Website &amp; systems modernisation</p>
+                <Link className={"btn ghost " + styles.caseLink} href="/tricia/work/icsh">Read the case study</Link>
+              </div>
               <p className={styles.caseIntro}>I helped modernise ICSH’s digital setup across its website, workspaces, forms, and membership processes. My role connected the public-facing website with the practical systems the team needs behind it.</p>
             </div>
             <div className={styles.deliverables}>{icshWork.map(({ title, body }) => <div key={title}><h4>{title}</h4><p>{body}</p></div>)}</div>
-            <div className={styles.caseFooter}><Link className="textlink" href="/tricia/work/icsh">Read the case study</Link></div>
           </article>
           <article className={"case " + styles.tableCase}>
             <div>
@@ -67,113 +69,116 @@ export default function Portfolio() {
             </div>
             <Link className="btn ghost" href="/tricia/work/the-table">Read the case study</Link>
           </article>
-          <div className="case">
-            <div className="case-top">
-              <div>
-                <h3>Bouncee Co</h3>
-                <p className="desc">
-                  Stylish inflatable playhouses and toys, US
-                </p>
-                <div className="case-tags">
-                  <span>Social</span>
-                  <span>Email</span>
-                  <span>Amazon</span>
-                  <span>Influencer</span>
+          <section className={styles.organicWork} aria-labelledby="organic-social-media-manager">
+            <h3 id="organic-social-media-manager">Organic Social Media Manager</h3>
+            <div className="case">
+              <div className="case-top">
+                <div>
+                  <h4>Bouncee Co</h4>
+                  <p className="desc">
+                    Stylish inflatable playhouses and toys, US
+                  </p>
+                  <div className="case-tags">
+                    <span>Social</span>
+                    <span>Email</span>
+                    <span>Amazon</span>
+                    <span>Influencer</span>
+                  </div>
+                </div>
+                <div className="metrics">
+                  <div className="metric">
+                    <div className="n">9,600+</div>
+                    <div className="l">authentic followers in year one</div>
+                  </div>
+                  <div className="metric">
+                    <div className="n">0 to 1</div>
+                    <div className="l">launched from scratch, organically</div>
+                  </div>
                 </div>
               </div>
-              <div className="metrics">
-                <div className="metric">
-                  <div className="n">9,600+</div>
-                  <div className="l">authentic followers in year one</div>
-                </div>
-                <div className="metric">
-                  <div className="n">0 to 1</div>
-                  <div className="l">launched from scratch, organically</div>
-                </div>
-              </div>
-            </div>
-            <div className="samples">
-              <figure>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/grid-bouncee.jpg"
-                  alt="Instagram content grid created for Bouncee Co"
-                  loading="lazy"
+              <div className="samples">
+                <figure>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/grid-bouncee.jpg"
+                    alt="Instagram content grid created for Bouncee Co"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Instagram grid: content planning and creation
+                  </figcaption>
+                </figure>
+                <Carousel
+                  slides={[
+                    {
+                      src: "/images/email-bouncee-1.jpg",
+                      alt: "Email newsletter for Bouncee Co: Ball Pit Play Ideas",
+                      caption: "Email: engagement campaign",
+                    },
+                    {
+                      src: "/images/email-bouncee-2.jpg",
+                      alt: "Email newsletter for Bouncee Co with product call to action",
+                      caption: "Email: content to conversion",
+                    },
+                  ]}
                 />
-                <figcaption>
-                  Instagram grid: content planning and creation
-                </figcaption>
-              </figure>
-              <Carousel
-                slides={[
-                  {
-                    src: "/images/email-bouncee-1.jpg",
-                    alt: "Email newsletter for Bouncee Co: Ball Pit Play Ideas",
-                    caption: "Email: engagement campaign",
-                  },
-                  {
-                    src: "/images/email-bouncee-2.jpg",
-                    alt: "Email newsletter for Bouncee Co with product call to action",
-                    caption: "Email: content to conversion",
-                  },
-                ]}
-              />
+              </div>
             </div>
-          </div>
 
-          <div className="case">
-            <div className="case-top">
-              <div>
-                <h3>Earthside Birth Pools</h3>
-                <p className="desc">
-                  Thoughtfully designed birth pools for home births, US
-                </p>
-                <div className="case-tags">
-                  <span>Social</span>
-                  <span>Email</span>
-                  <span>Amazon</span>
-                  <span>Influencer</span>
+            <div className="case">
+              <div className="case-top">
+                <div>
+                  <h4>Earthside Birth Pools</h4>
+                  <p className="desc">
+                    Thoughtfully designed birth pools for home births, US
+                  </p>
+                  <div className="case-tags">
+                    <span>Social</span>
+                    <span>Email</span>
+                    <span>Amazon</span>
+                    <span>Influencer</span>
+                  </div>
+                </div>
+                <div className="metrics">
+                  <div className="metric">
+                    <div className="n">9,700+</div>
+                    <div className="l">followers, grown from zero in a year</div>
+                  </div>
+                  <div className="metric">
+                    <div className="n">Trust-first</div>
+                    <div className="l">voice held in a sensitive category</div>
+                  </div>
                 </div>
               </div>
-              <div className="metrics">
-                <div className="metric">
-                  <div className="n">9,700+</div>
-                  <div className="l">followers, grown from zero in a year</div>
-                </div>
-                <div className="metric">
-                  <div className="n">Trust-first</div>
-                  <div className="l">voice held in a sensitive category</div>
-                </div>
-              </div>
-            </div>
-            <div className="samples">
-              <figure>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/grid-earthside.jpg"
-                  alt="Instagram content grid created for Earthside Birth Pools"
-                  loading="lazy"
+              <div className="samples">
+                <figure>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/grid-earthside.jpg"
+                    alt="Instagram content grid created for Earthside Birth Pools"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Instagram grid: brand voice and storytelling
+                  </figcaption>
+                </figure>
+                <Carousel
+                  slides={[
+                    {
+                      src: "/images/email-earthside-1.jpg",
+                      alt: "Email newsletter for Earthside: Birth is not just a medical event",
+                      caption: "Email: education-led nurture",
+                    },
+                    {
+                      src: "/images/email-earthside-2.jpg",
+                      alt: "Email newsletter for Earthside on setting up a home birth space",
+                      caption: "Email: guide format with product tie-in",
+                    },
+                  ]}
                 />
-                <figcaption>
-                  Instagram grid: brand voice and storytelling
-                </figcaption>
-              </figure>
-              <Carousel
-                slides={[
-                  {
-                    src: "/images/email-earthside-1.jpg",
-                    alt: "Email newsletter for Earthside: Birth is not just a medical event",
-                    caption: "Email: education-led nurture",
-                  },
-                  {
-                    src: "/images/email-earthside-2.jpg",
-                    alt: "Email newsletter for Earthside on setting up a home birth space",
-                    caption: "Email: guide format with product tie-in",
-                  },
-                ]}
-              />
+              </div>
             </div>
-          </div>
+          </section>
         </Reveal>
       </section>
 
