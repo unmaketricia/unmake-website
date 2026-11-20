@@ -1,0 +1,139 @@
+:root {
+  --preview-width: 1140px;
+  --preview-gutter: clamp(20px, 5vw, 56px);
+}
+
+/* Keep the main sections on the same horizontal grid. */
+body > nav,
+body > header.wrap,
+main > section.hero,
+main > section.section,
+main > section.stock-feature,
+main > section.feature,
+main > .sample-photos-note,
+main > section.split-contact,
+body > footer {
+  width: min(calc(100% - var(--preview-gutter) - var(--preview-gutter)), var(--preview-width));
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+body > nav,
+body > header.wrap {
+  padding-block: clamp(16px, 2.6vw, 28px);
+  gap: clamp(12px, 3vw, 30px);
+}
+
+.brand {
+  min-width: 0;
+  line-height: 1.12;
+}
+
+.nav,
+.navlinks {
+  flex-shrink: 0;
+}
+
+.nav .btn,
+.navlinks .button {
+  white-space: nowrap;
+}
+
+.sample,
+.banner {
+  line-height: 1.45;
+}
+
+main > section.hero {
+  min-height: 0;
+  padding-block: clamp(42px, 6vw, 76px) clamp(54px, 7vw, 88px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(26px, 4.8vw, 56px);
+}
+
+.hero h1 {
+  font-size: clamp(44px, 5.4vw, 78px);
+  text-wrap: balance;
+}
+
+.hero p {
+  text-wrap: pretty;
+}
+
+main > section.hero .photo,
+.hero-art .stock-hero,
+.stock-feature img,
+.feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+main > section.hero .photo,
+.hero-art .stock-hero {
+  aspect-ratio: 4 / 3;
+  max-height: 480px;
+}
+
+.stock-feature img,
+.feature img {
+  aspect-ratio: 3 / 2;
+  max-height: 370px;
+}
+
+.image-label {
+  right: 14px;
+  width: fit-content;
+  max-width: calc(100% - 30px);
+  line-height: 1.35;
+}
+
+main > section.feature {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  padding-bottom: clamp(54px, 8vw, 95px);
+  gap: clamp(26px, 4.8vw, 56px);
+}
+
+.cards > * {
+  min-width: 0;
+}
+
+.section-heading p {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+  .brand {
+    font-size: clamp(19px, 5vw, 25px);
+  }
+
+  .nav .btn,
+  .navlinks .button {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  main > section.hero,
+  main > section.feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  main > section.hero {
+    padding-block: 36px 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 9.2vw, 60px);
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .section-heading p {
+    margin-top: 10px;
+  }
+}
